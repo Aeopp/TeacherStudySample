@@ -1,0 +1,18 @@
+﻿  Sample.cpp
+D:\TeacherStudySample\TeacherStudySample\DirectX\TDxHelper.h(3,10): fatal error C1083: 포함 파일을 열 수 없습니다. 'd3dx11.h': No such file or directory
+  TBoxObj.cpp
+D:\TeacherStudySample\TeacherStudySample\DirectX\TDxHelper.h(3,10): fatal error C1083: 포함 파일을 열 수 없습니다. 'd3dx11.h': No such file or directory
+  TMath.cpp
+D:\TeacherStudySample\TeacherStudySample\_32\TMath.cpp(92,16): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\TeacherStudySample\TeacherStudySample\_32\TMath.cpp(140,13): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\TeacherStudySample\TeacherStudySample\_32\TMath.cpp(141,13): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\TeacherStudySample\TeacherStudySample\_32\TMath.cpp(147,13): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\TeacherStudySample\TeacherStudySample\_32\TMath.cpp(148,13): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\TeacherStudySample\TeacherStudySample\_32\TMath.cpp(154,13): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\TeacherStudySample\TeacherStudySample\_32\TMath.cpp(155,13): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\TeacherStudySample\TeacherStudySample\_32\TMath.cpp(214,8): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  TPlaneObj.cpp
+D:\TeacherStudySample\TeacherStudySample\DirectX\TDxHelper.h(3,10): fatal error C1083: 포함 파일을 열 수 없습니다. 'd3dx11.h': No such file or directory
+  xObject.cpp
+D:\TeacherStudySample\TeacherStudySample\DirectX\TDxHelper.h(3,10): fatal error C1083: 포함 파일을 열 수 없습니다. 'd3dx11.h': No such file or directory
+  코드를 생성하고 있습니다...

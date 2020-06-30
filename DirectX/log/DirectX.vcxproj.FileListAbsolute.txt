@@ -1,0 +1,2 @@
+D:\TeacherStudySample\TeacherStudySample\DirectX\output\DirectX.pdb
+D:\TeacherStudySample\TeacherStudySample\DirectX\log\DirectX.pdb
