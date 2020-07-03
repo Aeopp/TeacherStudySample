@@ -14,12 +14,17 @@ struct TCamera
 };
 class Sample : public TCore
 {
+	ComPtr<ID3D11DepthStencilState> m_pDSSBox;
+	ComPtr<ID3D11DepthStencilState> m_pDSSPlane;
 public:
-	TPlaneObj m_TriangleObj;
 	TPlaneObj			m_PlaneObj;
 	TBoxObj				m_BoxObj;
+	TBoxObj				m_BoxObjChild;
+	TBoxObj				m_BoxObjLeaf;
 	TMatrix				m_matWorldPlane;
 	TMatrix				m_matWorldBox;
+	TMatrix				m_matWorldBoxChild;
+	TMatrix				m_matWorldBoxLeaf;
 	TCamera				m_Camera;
 public:
 	bool Init();

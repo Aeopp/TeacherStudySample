@@ -24,6 +24,7 @@
     <ProjectGuid>{068862a1-f699-4302-9001-404b44cfe291}</ProjectGuid>
     <RootNamespace>My32</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>TestSample</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -72,15 +73,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>C:\</OutDir>
+    <IntDir>C:\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>C:\</OutDir>
+    <IntDir>C:\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>C:\</OutDir>
+    <IntDir>C:\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>C:\</OutDir>
+    <IntDir>C:\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -156,22 +165,27 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Image Include="f443bd4d47b6005f61fb8ab4271b204e.jpg" />
+    <Image Include="Lin.png" />
+    <Image Include="Lin2.jpg" />
+    <Image Include="Lin3.jpg" />
+    <Image Include="Lin4.jpg" />
+    <Image Include="Lin5.jpg" />
+    <Image Include="Lin6.jpg" />
+    <Image Include="Lin7.jpg" />
+    <Image Include="Lin8.jpg" />
+    <Image Include="Lin9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <Text Include="PS.txt" />
+    <Text Include="ShapeShader.txt" />
     <Text Include="VS.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sample.cpp" />
-    <ClCompile Include="TBoxObj.cpp" />
-    <ClCompile Include="TMath.cpp" />
-    <ClCompile Include="TPlaneObj.cpp" />
-    <ClCompile Include="xObject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sample.h" />
-    <ClInclude Include="TBoxObj.h" />
-    <ClInclude Include="TMath.h" />
-    <ClInclude Include="TPlaneObj.h" />
-    <ClInclude Include="xObject.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

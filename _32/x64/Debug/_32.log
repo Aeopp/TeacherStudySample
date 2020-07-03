@@ -128,7 +128,29 @@ C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56
 D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dwrite.h(4993,1): warning C4005: 'DWRITE_E_ALREADYREGISTERED': 매크로 재정의
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56841): message : 'DWRITE_E_ALREADYREGISTERED'의 이전 정의를 참조하십시오.
   D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-D:\TeacherStudySample\TeacherStudySample\_32\Sample.cpp(28,15): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\TeacherStudySample\TeacherStudySample\_32\Sample.cpp(69,15): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\utility(152,16): warning C4244: '초기화 중': 'LONG'에서 '_Ty1'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty1=float
+          ]
+D:\TeacherStudySample\TeacherStudySample\_32\Sample.cpp(101): message : 컴파일되는 함수 템플릿 인스턴스화 'std::pair<float,float>::pair<LONG&,LONG&,0>(_Other1,_Other2) noexcept'에 대한 참조를 확인하세요.
+          with
+          [
+              _Other1=LONG &,
+              _Other2=LONG &
+          ]
+D:\TeacherStudySample\TeacherStudySample\_32\Sample.cpp(101): message : 컴파일되는 함수 템플릿 인스턴스화 'std::pair<float,float>::pair<LONG&,LONG&,0>(_Other1,_Other2) noexcept'에 대한 참조를 확인하세요.
+          with
+          [
+              _Other1=LONG &,
+              _Other2=LONG &
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\utility(152,1): warning C4244: '초기화 중': 'LONG'에서 '_Ty2'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty2=float
+          ]
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2395,23): warning C4244: '인수': 'wchar_t'에서 'const _Elem'(으)로 변환하면서 데이터가 손실될 수 있습니다.
           with
           [

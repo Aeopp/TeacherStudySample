@@ -1,0 +1,49 @@
+Texture2D tex1 : register(t0);
+Texture2D tex2 : register(t1);
+SamplerState pointSam1 : register(s0);
+cbuffer cb : register(b0)
+{
+	float4 Color: packoffset(c0); 
+	float  xAdd: packoffset(c1.x);
+	float  yAdd: packoffset(c1.y);
+	float  fTime: packoffset(c1.w);
+}
+struct PS_IN
+{
+	float4 p	: SV_POSITION;
+	float3 n    : NORMAL;
+	float4 c    : COLOR0;
+	float2 t	: TEXCOORD0;
+};
+struct PS_OUT
+{
+	float4 c : SV_Target;
+};
+
+// 픽쉘 개수만큼 호출된다.
+PS_OUT PS( PS_IN vIn )  
+{
+	
+	PS_OUT vOut;
+	vOut.c =  tex1.Sample(pointSam1, vIn.t) ;
+	if(vOut.c.x >=255 && vOut.c.y >=0 && vOut.c.z >= 255 ){
+	vOut.c.x =0;
+	vOut.c.y = 0;
+	vOut.c.z =0 ; 
+	}
+	// vOut.c =  tex1.Sample(pointSam1, vIn.t) * vIn.c;
+	return vOut;
+}
+
+PS_OUT AlphaBlend(  PS_IN vIn) 
+{
+	PS_OUT vOut;
+	float4 color1 = tex1.Sample(pointSam1, vIn.t);
+	float4 color2 = tex2.Sample(pointSam1, vIn.t);
+	float4 ret = float4(color1.r, 
+						color1.g, 
+						color1.b, 
+						color2.a);
+	vOut.c = ret*float4(Color.xyz, cos(fTime)*0.5f+0.5f) * vIn.c;
+	return vOut;
+}

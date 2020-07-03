@@ -24,7 +24,7 @@ struct PS_OUT
 PS_OUT PS( PS_IN vIn )  
 {
 	PS_OUT vOut;
-	vOut.c =  tex1.Sample(pointSam1, vIn.t) * vIn.c;
+	vOut.c =  tex1.Sample(pointSam1, vIn.t);// * vIn.c;
 	return vOut;
 }
 

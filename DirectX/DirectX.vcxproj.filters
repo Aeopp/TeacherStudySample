@@ -15,6 +15,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="TBoxObj.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
     <ClCompile Include="TCore.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -31,6 +34,15 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="TInput.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TMath.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TObject.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TPlaneObj.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="TTexture.cpp">
@@ -50,6 +62,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="TBoxObj.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
     <ClInclude Include="TCore.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -66,6 +81,15 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="TInput.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TMath.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TObject.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TPlaneObj.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="TStd.h">

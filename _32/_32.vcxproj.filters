@@ -15,40 +15,49 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <Image Include="f443bd4d47b6005f61fb8ab4271b204e.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Lin.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Lin2.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Lin3.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Lin4.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Lin5.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Lin6.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Lin7.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Lin8.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Lin9.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
     <Text Include="PS.txt" />
     <Text Include="VS.txt" />
+    <Text Include="ShapeShader.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sample.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="TBoxObj.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="TMath.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="TPlaneObj.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="xObject.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sample.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="TBoxObj.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="TMath.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="TPlaneObj.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="xObject.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

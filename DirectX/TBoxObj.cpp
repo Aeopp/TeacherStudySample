@@ -109,22 +109,22 @@ void TBoxObj::CreateVertexData()
 	m_pVertexList[iVertex].t = Vector2(1, 1);
 	iVertex++;
 	//down
-	m_pVertexList[iVertex].p = { -1.0f, -1.0f, 1.0f };
+	m_pVertexList[iVertex].p = { -1.0f, -1.0f, -1.0f };
 	m_pVertexList[iVertex].n = Vector3(0, 0, -1);
 	m_pVertexList[iVertex].c = Vector4(1, 0, 0, 1);
 	m_pVertexList[iVertex].t = Vector2(0, 0);
 	iVertex++;
-	m_pVertexList[iVertex].p = { 1.0f, -1.0f, 1.0f };
+	m_pVertexList[iVertex].p = { 1.0f, -1.0f, -1.0f };
 	m_pVertexList[iVertex].n = Vector3(0, 0, -1);
 	m_pVertexList[iVertex].c = Vector4(0, 1, 0, 1);
 	m_pVertexList[iVertex].t = Vector2(1, 0);
 	iVertex++;
-	m_pVertexList[iVertex].p = { -1.0f, -1.0f, -1.0f };
+	m_pVertexList[iVertex].p = { -1.0f, -1.0f, 1.0f };
 	m_pVertexList[iVertex].n = Vector3(0, 0, -1);
 	m_pVertexList[iVertex].c = Vector4(0, 0, 1, 1);
 	m_pVertexList[iVertex].t = Vector2(0, 1);
 	iVertex++;
-	m_pVertexList[iVertex].p = { 1.0f, -1.0f, -1.0f };
+	m_pVertexList[iVertex].p = { 1.0f, -1.0f, 1.0f };
 	m_pVertexList[iVertex].n = Vector3(0, 0, -1);
 	m_pVertexList[iVertex].c = Vector4(1, 1, 1, 1);
 	m_pVertexList[iVertex].t = Vector2(1, 1);

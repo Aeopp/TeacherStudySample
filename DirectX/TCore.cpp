@@ -21,11 +21,11 @@ bool TCore::PreRender()
 { 	
 	m_pContext->OMSetRenderTargets(1, &m_pRTV, m_pDSV);
 
-	float clearcolor[4] = { 0.45f,0.45f,0.75f,1 };
+	float clearcolor[4] = { 0.0f,0.0f,0.0f,1 };
 	m_pContext->ClearRenderTargetView(m_pRTV, clearcolor);
 	m_pContext->ClearDepthStencilView(m_pDSV, D3D11_CLEAR_DEPTH| D3D11_CLEAR_STENCIL, 1.0f, 0);	
 	ApplyRS(m_pContext, TDxState::g_pRSSolidBack);
-	ApplyBS(m_pContext, TDxState::g_pBlendState);
+	ApplyBS(m_pContext, TDxState::g_pBSAlphaBlend);
 	ApplySS(m_pContext, TDxState::g_pSamplerState);
 	ApplyDSS(m_pContext, TDxState::g_pDSSDepthEnable);
 

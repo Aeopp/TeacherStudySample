@@ -1,16 +1,118 @@
-﻿  TCore.h
+﻿  TBoxObj.h
+  TCore.h
   TDevice.h
   TDxHelper.h
   TDxHelperEx.h
   TDxState.h
   TInput.h
+  TMath.h
+  TObject.h
+  TPlaneObj.h
   TStd.h
   TTexture.h
   TTextureMgr.h
   TTimer.h
   TWindow.h
   TWrite.h
-         12개 파일이 복사되었습니다.
+         16개 파일이 복사되었습니다.
+  TBoxObj.cpp
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(12,1): warning C4005: 'DXGI_STATUS_OCCLUDED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55840): message : 'DXGI_STATUS_OCCLUDED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(13,1): warning C4005: 'DXGI_STATUS_CLIPPED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55849): message : 'DXGI_STATUS_CLIPPED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(14,1): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55858): message : 'DXGI_STATUS_NO_REDIRECTION'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(15,1): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55867): message : 'DXGI_STATUS_NO_DESKTOP_ACCESS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(16,1): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55876): message : 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(17,1): warning C4005: 'DXGI_STATUS_MODE_CHANGED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55885): message : 'DXGI_STATUS_MODE_CHANGED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(18,1): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55894): message : 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(21,1): warning C4005: 'DXGI_ERROR_INVALID_CALL': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55909): message : 'DXGI_ERROR_INVALID_CALL'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(22,1): warning C4005: 'DXGI_ERROR_NOT_FOUND': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55918): message : 'DXGI_ERROR_NOT_FOUND'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(23,1): warning C4005: 'DXGI_ERROR_MORE_DATA': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55927): message : 'DXGI_ERROR_MORE_DATA'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(24,1): warning C4005: 'DXGI_ERROR_UNSUPPORTED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55936): message : 'DXGI_ERROR_UNSUPPORTED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(25,1): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55945): message : 'DXGI_ERROR_DEVICE_REMOVED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(26,1): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55954): message : 'DXGI_ERROR_DEVICE_HUNG'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(27,1): warning C4005: 'DXGI_ERROR_DEVICE_RESET': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55964): message : 'DXGI_ERROR_DEVICE_RESET'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(28,1): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55973): message : 'DXGI_ERROR_WAS_STILL_DRAWING'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(29,1): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55983): message : 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(30,1): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55992): message : 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(31,1): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56002): message : 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(32,1): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56011): message : 'DXGI_ERROR_NONEXCLUSIVE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(33,1): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56020): message : 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(34,1): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56030): message : 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(35,1): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56039): message : 'DXGI_ERROR_REMOTE_OUTOFMEMORY'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(917,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56303): message : 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(918,1): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56312): message : 'D3D11_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(919,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56322): message : 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(920,1): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56331): message : 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d10.h(608,1): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56279): message : 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d10.h(609,1): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56288): message : 'D3D10_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TBoxObj.cpp(132,37): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TBoxObj.cpp(155,35): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2395,23): warning C4244: '인수': 'wchar_t'에서 'const _Elem'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Elem=char
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2406): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(_Iter,const _Iter,std::input_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2406): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(_Iter,const _Iter,std::input_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2386): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(const _Iter,const _Iter,std::forward_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2386): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(const _Iter,const _Iter,std::forward_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
   TCore.cpp
 D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(12,1): warning C4005: 'DXGI_STATUS_OCCLUDED': 매크로 재정의
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55840): message : 'DXGI_STATUS_OCCLUDED'의 이전 정의를 참조하십시오.
@@ -166,14 +268,14 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
           [
               _Iter=wchar_t *
           ]
-D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
           with
           [
               _Elem=wchar_t,
               _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
               _Alloc=std::allocator<char>
           ]
-D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
           with
           [
               _Elem=wchar_t,
@@ -266,136 +368,20 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
           [
               _Iter=wchar_t *
           ]
-D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
           with
           [
               _Elem=wchar_t,
               _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
               _Alloc=std::allocator<char>
           ]
-D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
           with
           [
               _Elem=wchar_t,
               _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
               _Alloc=std::allocator<char>
           ]
-  TDxHelper.cpp
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(12,1): warning C4005: 'DXGI_STATUS_OCCLUDED': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55840): message : 'DXGI_STATUS_OCCLUDED'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(13,1): warning C4005: 'DXGI_STATUS_CLIPPED': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55849): message : 'DXGI_STATUS_CLIPPED'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(14,1): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55858): message : 'DXGI_STATUS_NO_REDIRECTION'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(15,1): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55867): message : 'DXGI_STATUS_NO_DESKTOP_ACCESS'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(16,1): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55876): message : 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(17,1): warning C4005: 'DXGI_STATUS_MODE_CHANGED': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55885): message : 'DXGI_STATUS_MODE_CHANGED'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(18,1): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55894): message : 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(21,1): warning C4005: 'DXGI_ERROR_INVALID_CALL': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55909): message : 'DXGI_ERROR_INVALID_CALL'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(22,1): warning C4005: 'DXGI_ERROR_NOT_FOUND': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55918): message : 'DXGI_ERROR_NOT_FOUND'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(23,1): warning C4005: 'DXGI_ERROR_MORE_DATA': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55927): message : 'DXGI_ERROR_MORE_DATA'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(24,1): warning C4005: 'DXGI_ERROR_UNSUPPORTED': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55936): message : 'DXGI_ERROR_UNSUPPORTED'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(25,1): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55945): message : 'DXGI_ERROR_DEVICE_REMOVED'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(26,1): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55954): message : 'DXGI_ERROR_DEVICE_HUNG'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(27,1): warning C4005: 'DXGI_ERROR_DEVICE_RESET': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55964): message : 'DXGI_ERROR_DEVICE_RESET'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(28,1): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55973): message : 'DXGI_ERROR_WAS_STILL_DRAWING'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(29,1): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55983): message : 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(30,1): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55992): message : 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(31,1): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56002): message : 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(32,1): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56011): message : 'DXGI_ERROR_NONEXCLUSIVE'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(33,1): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56020): message : 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(34,1): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56030): message : 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(35,1): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56039): message : 'DXGI_ERROR_REMOTE_OUTOFMEMORY'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(917,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56303): message : 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(918,1): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56312): message : 'D3D11_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(919,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56322): message : 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(920,1): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56331): message : 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d10.h(608,1): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56279): message : 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d10.h(609,1): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56288): message : 'D3D10_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
-  TDxHelperEx.cpp
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(12,1): warning C4005: 'DXGI_STATUS_OCCLUDED': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55840): message : 'DXGI_STATUS_OCCLUDED'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(13,1): warning C4005: 'DXGI_STATUS_CLIPPED': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55849): message : 'DXGI_STATUS_CLIPPED'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(14,1): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55858): message : 'DXGI_STATUS_NO_REDIRECTION'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(15,1): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55867): message : 'DXGI_STATUS_NO_DESKTOP_ACCESS'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(16,1): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55876): message : 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(17,1): warning C4005: 'DXGI_STATUS_MODE_CHANGED': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55885): message : 'DXGI_STATUS_MODE_CHANGED'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(18,1): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55894): message : 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(21,1): warning C4005: 'DXGI_ERROR_INVALID_CALL': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55909): message : 'DXGI_ERROR_INVALID_CALL'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(22,1): warning C4005: 'DXGI_ERROR_NOT_FOUND': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55918): message : 'DXGI_ERROR_NOT_FOUND'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(23,1): warning C4005: 'DXGI_ERROR_MORE_DATA': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55927): message : 'DXGI_ERROR_MORE_DATA'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(24,1): warning C4005: 'DXGI_ERROR_UNSUPPORTED': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55936): message : 'DXGI_ERROR_UNSUPPORTED'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(25,1): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55945): message : 'DXGI_ERROR_DEVICE_REMOVED'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(26,1): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55954): message : 'DXGI_ERROR_DEVICE_HUNG'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(27,1): warning C4005: 'DXGI_ERROR_DEVICE_RESET': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55964): message : 'DXGI_ERROR_DEVICE_RESET'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(28,1): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55973): message : 'DXGI_ERROR_WAS_STILL_DRAWING'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(29,1): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55983): message : 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(30,1): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55992): message : 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(31,1): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56002): message : 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(32,1): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56011): message : 'DXGI_ERROR_NONEXCLUSIVE'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(33,1): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56020): message : 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(34,1): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56030): message : 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(35,1): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56039): message : 'DXGI_ERROR_REMOTE_OUTOFMEMORY'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(917,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56303): message : 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(918,1): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56312): message : 'D3D11_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(919,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56322): message : 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(920,1): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56331): message : 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d10.h(608,1): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56279): message : 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d10.h(609,1): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': 매크로 재정의
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56288): message : 'D3D10_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
-D:\TeacherStudySample\TeacherStudySample\DirectX\TDxHelperEx.cpp(152,31): warning C4244: '=': 'SIZE_T'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\TeacherStudySample\TeacherStudySample\DirectX\TDxHelperEx.cpp(195,31): warning C4244: '=': 'SIZE_T'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   TDxState.cpp
 D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(12,1): warning C4005: 'DXGI_STATUS_OCCLUDED': 매크로 재정의
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55840): message : 'DXGI_STATUS_OCCLUDED'의 이전 정의를 참조하십시오.
@@ -478,14 +464,14 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
           [
               _Iter=wchar_t *
           ]
-D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
           with
           [
               _Elem=wchar_t,
               _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
               _Alloc=std::allocator<char>
           ]
-D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
           with
           [
               _Elem=wchar_t,
@@ -575,14 +561,210 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
           [
               _Iter=wchar_t *
           ]
-D:\TeacherStudySample\TeacherStudySample\DirectX\tStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+D:\TeacherStudySample\TeacherStudySample\DirectX\tStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
           with
           [
               _Elem=wchar_t,
               _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
               _Alloc=std::allocator<char>
           ]
-D:\TeacherStudySample\TeacherStudySample\DirectX\tStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+D:\TeacherStudySample\TeacherStudySample\DirectX\tStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+  TObject.cpp
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(12,1): warning C4005: 'DXGI_STATUS_OCCLUDED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55840): message : 'DXGI_STATUS_OCCLUDED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(13,1): warning C4005: 'DXGI_STATUS_CLIPPED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55849): message : 'DXGI_STATUS_CLIPPED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(14,1): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55858): message : 'DXGI_STATUS_NO_REDIRECTION'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(15,1): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55867): message : 'DXGI_STATUS_NO_DESKTOP_ACCESS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(16,1): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55876): message : 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(17,1): warning C4005: 'DXGI_STATUS_MODE_CHANGED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55885): message : 'DXGI_STATUS_MODE_CHANGED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(18,1): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55894): message : 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(21,1): warning C4005: 'DXGI_ERROR_INVALID_CALL': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55909): message : 'DXGI_ERROR_INVALID_CALL'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(22,1): warning C4005: 'DXGI_ERROR_NOT_FOUND': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55918): message : 'DXGI_ERROR_NOT_FOUND'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(23,1): warning C4005: 'DXGI_ERROR_MORE_DATA': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55927): message : 'DXGI_ERROR_MORE_DATA'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(24,1): warning C4005: 'DXGI_ERROR_UNSUPPORTED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55936): message : 'DXGI_ERROR_UNSUPPORTED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(25,1): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55945): message : 'DXGI_ERROR_DEVICE_REMOVED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(26,1): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55954): message : 'DXGI_ERROR_DEVICE_HUNG'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(27,1): warning C4005: 'DXGI_ERROR_DEVICE_RESET': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55964): message : 'DXGI_ERROR_DEVICE_RESET'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(28,1): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55973): message : 'DXGI_ERROR_WAS_STILL_DRAWING'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(29,1): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55983): message : 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(30,1): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55992): message : 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(31,1): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56002): message : 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(32,1): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56011): message : 'DXGI_ERROR_NONEXCLUSIVE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(33,1): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56020): message : 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(34,1): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56030): message : 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(35,1): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56039): message : 'DXGI_ERROR_REMOTE_OUTOFMEMORY'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(917,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56303): message : 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(918,1): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56312): message : 'D3D11_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(919,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56322): message : 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(920,1): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56331): message : 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d10.h(608,1): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56279): message : 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d10.h(609,1): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56288): message : 'D3D10_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TObject.cpp(149,34): warning C4244: '인수': 'SIZE_T'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TObject.cpp(182,10): warning C4101: 'hr' :참조되지 않은 지역 변수입니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2395,23): warning C4244: '인수': 'wchar_t'에서 'const _Elem'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Elem=char
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2406): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(_Iter,const _Iter,std::input_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2406): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(_Iter,const _Iter,std::input_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2386): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(const _Iter,const _Iter,std::forward_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2386): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(const _Iter,const _Iter,std::forward_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+  TPlaneObj.cpp
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(12,1): warning C4005: 'DXGI_STATUS_OCCLUDED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55840): message : 'DXGI_STATUS_OCCLUDED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(13,1): warning C4005: 'DXGI_STATUS_CLIPPED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55849): message : 'DXGI_STATUS_CLIPPED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(14,1): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55858): message : 'DXGI_STATUS_NO_REDIRECTION'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(15,1): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55867): message : 'DXGI_STATUS_NO_DESKTOP_ACCESS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(16,1): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55876): message : 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(17,1): warning C4005: 'DXGI_STATUS_MODE_CHANGED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55885): message : 'DXGI_STATUS_MODE_CHANGED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(18,1): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55894): message : 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(21,1): warning C4005: 'DXGI_ERROR_INVALID_CALL': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55909): message : 'DXGI_ERROR_INVALID_CALL'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(22,1): warning C4005: 'DXGI_ERROR_NOT_FOUND': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55918): message : 'DXGI_ERROR_NOT_FOUND'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(23,1): warning C4005: 'DXGI_ERROR_MORE_DATA': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55927): message : 'DXGI_ERROR_MORE_DATA'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(24,1): warning C4005: 'DXGI_ERROR_UNSUPPORTED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55936): message : 'DXGI_ERROR_UNSUPPORTED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(25,1): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55945): message : 'DXGI_ERROR_DEVICE_REMOVED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(26,1): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55954): message : 'DXGI_ERROR_DEVICE_HUNG'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(27,1): warning C4005: 'DXGI_ERROR_DEVICE_RESET': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55964): message : 'DXGI_ERROR_DEVICE_RESET'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(28,1): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55973): message : 'DXGI_ERROR_WAS_STILL_DRAWING'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(29,1): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55983): message : 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(30,1): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55992): message : 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(31,1): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56002): message : 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(32,1): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56011): message : 'DXGI_ERROR_NONEXCLUSIVE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(33,1): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56020): message : 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(34,1): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56030): message : 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(35,1): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56039): message : 'DXGI_ERROR_REMOTE_OUTOFMEMORY'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(917,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56303): message : 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(918,1): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56312): message : 'D3D11_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(919,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56322): message : 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(920,1): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56331): message : 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d10.h(608,1): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56279): message : 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d10.h(609,1): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56288): message : 'D3D10_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TPlaneObj.cpp(62,37): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TPlaneObj.cpp(69,35): warning C4267: '=': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2395,23): warning C4244: '인수': 'wchar_t'에서 'const _Elem'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Elem=char
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2406): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(_Iter,const _Iter,std::input_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2406): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(_Iter,const _Iter,std::input_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2386): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(const _Iter,const _Iter,std::forward_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2386): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(const _Iter,const _Iter,std::forward_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
           with
           [
               _Elem=wchar_t,
@@ -671,14 +853,14 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
           [
               _Iter=wchar_t *
           ]
-D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
           with
           [
               _Elem=wchar_t,
               _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
               _Alloc=std::allocator<char>
           ]
-D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
           with
           [
               _Elem=wchar_t,
@@ -767,14 +949,14 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
           [
               _Iter=wchar_t *
           ]
-D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
           with
           [
               _Elem=wchar_t,
               _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
               _Alloc=std::allocator<char>
           ]
-D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
           with
           [
               _Elem=wchar_t,
@@ -863,14 +1045,14 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
           [
               _Iter=wchar_t *
           ]
-D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
           with
           [
               _Elem=wchar_t,
               _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
               _Alloc=std::allocator<char>
           ]
-D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
           with
           [
               _Elem=wchar_t,
@@ -959,14 +1141,14 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
           [
               _Iter=wchar_t *
           ]
-D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
           with
           [
               _Elem=wchar_t,
               _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
               _Alloc=std::allocator<char>
           ]
-D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
           with
           [
               _Elem=wchar_t,
@@ -1138,14 +1320,14 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
           [
               _Iter=wchar_t *
           ]
-D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
           with
           [
               _Elem=wchar_t,
               _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
               _Alloc=std::allocator<char>
           ]
-D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(80): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
           with
           [
               _Elem=wchar_t,

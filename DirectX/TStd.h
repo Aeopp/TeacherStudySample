@@ -21,6 +21,7 @@ typedef std::vector<T_STR> T_STR_VECTOR;
 
 //추가종속성 winmm.lib; fmod_vc.lib; TCoreLib.lib;
 #pragma comment (lib, "winmm.lib")
+//#pragma comment (lib, "TCoreDx_d.lib")
 //#pragma comment (lib, "fmod_vc.lib")
 
 

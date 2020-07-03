@@ -1,7 +1,8 @@
 #include "TDxState.h"
 
 ID3D11SamplerState* TDxState::g_pSamplerState=nullptr;
-ID3D11BlendState*   TDxState::g_pBlendState = nullptr;
+ID3D11BlendState*   TDxState::g_pBSAlphaBlend = nullptr;
+ID3D11BlendState*   TDxState::g_pBSNoColorBlend = nullptr;
 ID3D11RasterizerState*   TDxState::g_pRSSolidNone = nullptr;
 ID3D11RasterizerState*   TDxState::g_pRSWireFrameBack = nullptr;
 ID3D11RasterizerState*   TDxState::g_pRSSolidBack = nullptr;
@@ -44,7 +45,17 @@ void TDxState::Create(  ID3D11Device* pd3dDevice,
 
 	hr = pd3dDevice->CreateBlendState(
 		&bsd,
-		&g_pBlendState);
+		&g_pBSAlphaBlend);
+
+	bsd.RenderTarget[0].SrcBlend = D3D11_BLEND_ZERO;
+	bsd.RenderTarget[0].DestBlend = D3D11_BLEND_ONE;
+	bsd.RenderTarget[0].BlendOp = D3D11_BLEND_OP_ADD;
+	bsd.RenderTarget[0].RenderTargetWriteMask = 0;
+
+	hr = pd3dDevice->CreateBlendState(
+		&bsd,
+		&g_pBSNoColorBlend);
+	
 #pragma endregion 
 #pragma region RasterizerState 
 	D3D11_RASTERIZER_DESC rd;
@@ -101,7 +112,8 @@ bool TDxState::Release()
 	if (g_pRSSolidNone) g_pRSSolidNone->Release();
 	if (g_pRSWireFrameBack) g_pRSWireFrameBack->Release();
 	if(g_pSamplerState) g_pSamplerState->Release();
-	if (g_pBlendState) g_pBlendState->Release();
+	if (g_pBSAlphaBlend) g_pBSAlphaBlend->Release();
+	if (g_pBSNoColorBlend)g_pBSNoColorBlend->Release();
 	return true;
 }
 

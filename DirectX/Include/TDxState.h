@@ -4,7 +4,8 @@ class TDxState
 {
 public:
 	static ID3D11SamplerState* g_pSamplerState;
-	static ID3D11BlendState*   g_pBlendState;
+	static ID3D11BlendState*   g_pBSAlphaBlend;
+	static ID3D11BlendState*   g_pBSNoColorBlend;
 	static ID3D11RasterizerState*   g_pRSSolidNone;
 	static ID3D11RasterizerState*   g_pRSWireFrameBack;
 	static ID3D11RasterizerState*   g_pRSSolidBack;

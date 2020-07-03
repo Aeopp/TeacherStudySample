@@ -19,12 +19,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="TBoxObj.cpp" />
     <ClCompile Include="TCore.cpp" />
     <ClCompile Include="TDevice.cpp" />
     <ClCompile Include="TDxHelper.cpp" />
     <ClCompile Include="TDxHelperEx.cpp" />
     <ClCompile Include="TDxState.cpp" />
     <ClCompile Include="TInput.cpp" />
+    <ClCompile Include="TMath.cpp" />
+    <ClCompile Include="TObject.cpp" />
+    <ClCompile Include="TPlaneObj.cpp" />
     <ClCompile Include="TTexture.cpp" />
     <ClCompile Include="TTextureMgr.cpp" />
     <ClCompile Include="TTimer.cpp" />
@@ -32,12 +36,16 @@
     <ClCompile Include="TWrite.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="TBoxObj.h" />
     <ClInclude Include="TCore.h" />
     <ClInclude Include="TDevice.h" />
     <ClInclude Include="TDxHelper.h" />
     <ClInclude Include="TDxHelperEx.h" />
     <ClInclude Include="TDxState.h" />
     <ClInclude Include="TInput.h" />
+    <ClInclude Include="TMath.h" />
+    <ClInclude Include="TObject.h" />
+    <ClInclude Include="TPlaneObj.h" />
     <ClInclude Include="TStd.h" />
     <ClInclude Include="TTexture.h" />
     <ClInclude Include="TTextureMgr.h" />
