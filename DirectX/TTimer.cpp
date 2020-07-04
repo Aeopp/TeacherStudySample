@@ -22,7 +22,7 @@ bool	TTimer::Frame()
 
 	m_fFrameTime += m_fSecondPerFrame;
 	if (m_fFrameTime > 1.0f)
-	{		
+	{
 		m_dwFPS = m_dwFrameCnt;
 		m_dwFrameCnt = 0;
 		m_fFrameTime = m_fFrameTime - 1.0f;
@@ -51,8 +51,8 @@ bool	TTimer::Frame()
 	//m_BeforeClock = current;
 
 
-	_stprintf_s(m_csBuffer,L"%10.4f:%d", 
-	m_fTimer, m_dwFPS );
+	_stprintf_s(m_csBuffer, L"%10.4f:%d",
+		m_fTimer, m_dwFPS);
 	return true;
 }
 bool	TTimer::Render()
@@ -65,7 +65,7 @@ bool	TTimer::Release()
 	return true;
 }
 
-TTimer::TTimer() 
+TTimer::TTimer()
 {
 	m_fSecondPerFrame = 0.0f;
 	m_fTimer = 0.0f;

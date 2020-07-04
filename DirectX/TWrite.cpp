@@ -2,7 +2,7 @@
 #include "TStd.h"
 
 void TWrite::Draw(UINT iSize, const TCHAR* szBuffer, RECT rt,
-					D2D1::ColorF color)
+	D2D1::ColorF color)
 {
 	TTextArray text;
 	text.iSize = iSize;
@@ -23,21 +23,21 @@ bool TWrite::SetTextLayout(const TCHAR* text)
 {
 	if (m_pTextLayout) m_pTextLayout->Release();
 	HRESULT hr = m_pDWriteFactory->CreateTextLayout(
-			text,
-			wcslen(text),
-			m_pTextFormat[3],
-			g_rtClient.right,
-			g_rtClient.bottom,
-			&m_pTextLayout);
+		text,
+		wcslen(text),
+		m_pTextFormat[3],
+		g_rtClient.right,
+		g_rtClient.bottom,
+		&m_pTextLayout);
 
 	IDWriteTypography* pGraphy = nullptr;
-		hr = m_pDWriteFactory->CreateTypography(&pGraphy);
-		DWRITE_FONT_FEATURE fontFeature = { DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_7,1 };
-			pGraphy->AddFontFeature(fontFeature);
-		DWRITE_TEXT_RANGE range = { 0, wcslen(text) };
-		m_pTextLayout->SetTypography(pGraphy, range);
+	hr = m_pDWriteFactory->CreateTypography(&pGraphy);
+	DWRITE_FONT_FEATURE fontFeature = { DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_7,1 };
+	pGraphy->AddFontFeature(fontFeature);
+	DWRITE_TEXT_RANGE range = { 0, wcslen(text) };
+	m_pTextLayout->SetTypography(pGraphy, range);
 	pGraphy->Release();
-	return true;	
+	return true;
 }
 bool  TWrite::Init()
 {
@@ -59,7 +59,7 @@ bool  TWrite::Init()
 			DWRITE_FONT_WEIGHT_NORMAL,
 			DWRITE_FONT_STYLE_NORMAL,
 			DWRITE_FONT_STRETCH_NORMAL,
-			10+iFont*10, L"ko-kr",
+			10 + iFont * 10, L"ko-kr",
 			&m_pTextFormat[iFont]);
 	}
 
@@ -70,7 +70,7 @@ bool  TWrite::Init()
 		DWRITE_FONT_STRETCH_NORMAL,
 		80, L"en-us",
 		&m_pTextFormat[3]);
-	
+
 	return true;
 }
 
@@ -78,24 +78,24 @@ bool  TWrite::OnResize(IDXGISurface* pSurface)
 {
 	HRESULT hr;
 	D2D1_RENDER_TARGET_PROPERTIES rtp;
-	rtp.type= D2D1_RENDER_TARGET_TYPE_DEFAULT;
-	rtp.pixelFormat.format = 
+	rtp.type = D2D1_RENDER_TARGET_TYPE_DEFAULT;
+	rtp.pixelFormat.format =
 		DXGI_FORMAT_UNKNOWN;
-	rtp.pixelFormat.alphaMode = 
+	rtp.pixelFormat.alphaMode =
 		D2D1_ALPHA_MODE_PREMULTIPLIED;
 	rtp.dpiX = m_fDpiX;
 	rtp.dpiY = m_fDpiY;
-	rtp.usage= D2D1_RENDER_TARGET_USAGE_NONE;
+	rtp.usage = D2D1_RENDER_TARGET_USAGE_NONE;
 	rtp.minLevel = D2D1_FEATURE_LEVEL_DEFAULT;
 
 	// ÇÊ¼ö : D3D11_CREATE_DEVICE_BGRA_SUPPORT
 	hr = m_pD2DFactory->CreateDxgiSurfaceRenderTarget(
-		pSurface, 
+		pSurface,
 		&rtp,
 		&m_pd2dRT);
 
 	hr = m_pd2dRT->CreateSolidColorBrush(
-		D2D1::ColorF(D2D1::ColorF::Yellow), 
+		D2D1::ColorF(D2D1::ColorF::Yellow),
 		&m_pDefaultBrush);
 	return true;
 }
@@ -106,7 +106,7 @@ bool TWrite::Release()
 	if (m_pDefaultBrush) m_pDefaultBrush->Release();
 	if (m_pd2dRT) m_pd2dRT->Release();
 
-	if(m_pTextFormat[0])m_pTextFormat[0]->Release();
+	if (m_pTextFormat[0])m_pTextFormat[0]->Release();
 	if (m_pTextFormat[1])m_pTextFormat[1]->Release();
 	if (m_pTextFormat[2])m_pTextFormat[2]->Release();
 	if (m_pTextFormat[3])m_pTextFormat[3]->Release();
@@ -125,7 +125,7 @@ bool TWrite::Render()
 		m_pDefaultBrush->SetColor(m_TextList[i].color);
 		m_pd2dRT->DrawText(m_TextList[i].text.c_str(),
 			m_TextList[i].text.size(),
-			m_pTextFormat[m_TextList[i].iSize], 
+			m_pTextFormat[m_TextList[i].iSize],
 			m_TextList[i].rt,
 			m_pDefaultBrush);
 	}
@@ -136,7 +136,7 @@ bool TWrite::Render()
 TWrite::TWrite()
 {
 	m_pDWriteFactory = nullptr;
-	m_pD2DFactory = nullptr;	
+	m_pD2DFactory = nullptr;
 	m_pTextLayout = nullptr;
 }
 

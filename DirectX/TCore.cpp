@@ -17,13 +17,14 @@ void	TCore::DeleteDXResource()
 }
 bool TCore::Init() { return true; }
 bool TCore::Frame() { return true; }
-bool TCore::PreRender() 
-{ 	
+bool TCore::PreRender()
+{
 	m_pContext->OMSetRenderTargets(1, &m_pRTV, m_pDSV);
+	m_pContext->RSSetViewports(1, &m_vp);
 
 	float clearcolor[4] = { 0.0f,0.0f,0.0f,1 };
 	m_pContext->ClearRenderTargetView(m_pRTV, clearcolor);
-	m_pContext->ClearDepthStencilView(m_pDSV, D3D11_CLEAR_DEPTH| D3D11_CLEAR_STENCIL, 1.0f, 0);	
+	m_pContext->ClearDepthStencilView(m_pDSV, D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
 	ApplyRS(m_pContext, TDxState::g_pRSSolidBack);
 	ApplyBS(m_pContext, TDxState::g_pBSAlphaBlend);
 	ApplySS(m_pContext, TDxState::g_pSamplerState);
@@ -37,30 +38,30 @@ bool TCore::PreRender()
 	{
 		ApplyRS(m_pContext, TDxState::g_pRSSolidNone);
 	}
-	return true; 
+	return true;
 }
 bool TCore::Render() { return true; }
-bool TCore::PostRender() 
-{ 
+bool TCore::PostRender()
+{
 	m_Write.Render();
 	m_pSwapChain->Present(0, 0);
-	return true; 
+	return true;
 }
 bool TCore::Release() { return true; }
 
 bool TCore::TCoreInit()
-{	
+{
 	m_Timer.Init();
 	//I_SoundMgr.Init();
 	I_Input.Init();
-		
+
 	if (!SetD3DDevice(
 		m_rtClient.right,
 		m_rtClient.bottom)) return false;
-	
+
 	HRESULT hr = m_pGIFactory->MakeWindowAssociation(m_hWnd,
-			DXGI_MWA_NO_WINDOW_CHANGES |
-			DXGI_MWA_NO_ALT_ENTER);
+		DXGI_MWA_NO_WINDOW_CHANGES |
+		DXGI_MWA_NO_ALT_ENTER);
 	if (FAILED(hr))
 	{
 		return false;
@@ -80,6 +81,14 @@ bool TCore::TCoreInit()
 	//m_pSwapChain->SetFullscreenState(!fullscreen, NULL);
 
 	TDxState::Create(m_pd3dDevice, m_pContext);
+
+	m_Camera.Init();
+	m_DirLine.Create(m_pd3dDevice,
+		m_pContext,
+		L"../../../data/loading.bmp",
+		L"../../../data/shader/LineShader.txt");
+	m_DirLine.m_pBlendState = TDxState::g_pBSAlphaBlend;
+	m_DirLine.m_pSamplerState = TDxState::g_pSamplerState;
 
 	Init();
 	return true;
@@ -101,15 +110,20 @@ bool TCore::TCoreFrame()
 bool TCore::TCoreRender()
 {
 	PreRender();
-		Render();
+	Render();
 
-		//m_Timer.Render();
-		/*I_SoundMgr.Render();
-		I_Input.Render();	*/
+	//m_Timer.Render();
+	/*I_SoundMgr.Render();
+	I_Input.Render();	*/
 
-		T_STR strBuffer = L"GameTime";
-		strBuffer += m_Timer.m_csBuffer;
-		m_Write.Draw(1, strBuffer.c_str(), m_rtClient);
+	T_STR strBuffer = L"GameTime";
+	strBuffer += m_Timer.m_csBuffer;
+	m_Write.Draw(1, strBuffer.c_str(), m_rtClient);
+
+	m_DirLine.SetMatrix(NULL,
+		&m_Camera.m_matView,
+		&m_Camera.m_matProj);
+	m_DirLine.Render();
 
 	PostRender();
 	return true;
@@ -121,7 +135,7 @@ bool TCore::TCoreRelease()
 	m_Timer.Release();
 	I_Input.Release();
 	//I_SoundMgr.Release();
-
+	m_DirLine.Release();
 	TDevice::ReleaseDevice();
 	return true;
 }

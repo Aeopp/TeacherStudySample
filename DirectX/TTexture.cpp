@@ -12,8 +12,8 @@ bool	TTexture::Init()
 	return true;
 }
 
-bool	TTexture::Load( ID3D11Device* pd3dDevice,
-						T_STR szLoadFileName)
+bool	TTexture::Load(ID3D11Device* pd3dDevice,
+	T_STR szLoadFileName)
 {
 	HRESULT hr = D3DX11CreateShaderResourceViewFromFile(pd3dDevice, szLoadFileName.c_str(), NULL, NULL,
 		&m_pSRV, NULL);
@@ -21,7 +21,7 @@ bool	TTexture::Load( ID3D11Device* pd3dDevice,
 }
 bool	TTexture::Release()
 {
-	if(m_pSRV)m_pSRV->Release();
+	if (m_pSRV)m_pSRV->Release();
 	return true;
 }
 TTexture::TTexture()

@@ -88,7 +88,7 @@ public://TSoundMgr': private ¸â¹ö -> friend
 	{
 		static T theSingleton;
 		return theSingleton;
-	}	
+	}
 };
 
 #ifndef SAFE_NEW

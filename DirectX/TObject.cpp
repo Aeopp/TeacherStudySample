@@ -4,7 +4,7 @@ void	 TObject::SetMatrix(TMatrix* matWorld,
 	TMatrix* matView,
 	TMatrix* matProj)
 {
-	if( matWorld != nullptr)m_matWorldPlane = *matWorld;
+	if (matWorld != nullptr)m_matWorldPlane = *matWorld;
 	if (matView != nullptr)m_matView = *matView;
 	if (matProj != nullptr)m_matProj = *matProj;
 
@@ -13,7 +13,7 @@ void	 TObject::SetMatrix(TMatrix* matWorld,
 	m_cbData.matProj = m_matProj.Transpose();
 	m_pContext->UpdateSubresource(
 		m_dxObj.m_pConstantBuffer.Get(),
-		0, NULL, &m_cbData, 0,0);
+		0, NULL, &m_cbData, 0, 0);
 }
 void    TObject::SetPos(Vector3 p)
 {
@@ -22,8 +22,8 @@ void    TObject::SetPos(Vector3 p)
 Vector3  TObject::ScreenToNDC(POINT pt)
 {
 	Vector3 v;
-	v.x = ((float)pt.x / (float)g_rtClient.right)*2.0f - 1.0f; //-1.0f;
-	v.y = -(((float)pt.y / (float)g_rtClient.bottom)*2.0f - 1.0f);// 1.0f;
+	v.x = ((float)pt.x / (float)g_rtClient.right) * 2.0f - 1.0f; //-1.0f;
+	v.y = -(((float)pt.y / (float)g_rtClient.bottom) * 2.0f - 1.0f);// 1.0f;
 	v.z = 0.5f;
 	return v;
 }
@@ -36,7 +36,7 @@ void TObject::CreateIndexData()
 void TObject::CreateConstantData()
 {
 	m_cbData.c = { 1,1,1,1 };
-	m_cbData.x = 0.0f;	
+	m_cbData.x = 0.0f;
 	m_cbData.y = 0.0f;
 	m_cbData.z = 0.0f;
 	m_cbData.fTime = 0.0f * (3.141592f / 180.0f);
@@ -104,7 +104,7 @@ HRESULT TObject::CreateConstantBuffer()
 
 HRESULT TObject::LoadShaderFile(T_STR szShaderFileName)
 {
-	HRESULT hr=S_OK;
+	HRESULT hr = S_OK;
 	DWORD dwShaderFlags = 0;
 	ID3DBlob* pErrorBuf = nullptr;
 	m_dxObj.m_pVS.Attach(DX::LoadVertexShaderFile(m_pd3dDevice,
@@ -113,7 +113,7 @@ HRESULT TObject::LoadShaderFile(T_STR szShaderFileName)
 		"VS",
 		"vs_5_0",
 		&m_dxObj.m_pVSBuf));
-	if (m_dxObj.m_pVS.Get()==nullptr)
+	if (m_dxObj.m_pVS.Get() == nullptr)
 	{
 		hr = E_FAIL;
 	}
@@ -131,7 +131,7 @@ HRESULT TObject::LoadShaderFile(T_STR szShaderFileName)
 }
 HRESULT TObject::SetInputLayout()
 {
-	HRESULT hr=S_OK;
+	HRESULT hr = S_OK;
 	D3D11_INPUT_ELEMENT_DESC layout[] =
 	{
 		{  "POSITION", 0,	DXGI_FORMAT_R32G32B32_FLOAT,0,0,
@@ -145,12 +145,12 @@ HRESULT TObject::SetInputLayout()
 	};
 	UINT iNumElement = sizeof(layout) / sizeof(layout[0]);
 	m_dxObj.m_pVertexLayout.Attach(DX::CreateInputlayout(
-		m_pd3dDevice,		
+		m_pd3dDevice,
 		m_dxObj.m_pVSBuf->GetBufferSize(),
 		m_dxObj.m_pVSBuf->GetBufferPointer(),
 		layout,
 		iNumElement));
-	
+
 	/*UINT iNumElement = sizeof(layout) / sizeof(layout[0]);
 	hr = m_pd3dDevice->CreateInputLayout(
 		layout,
@@ -163,10 +163,10 @@ HRESULT TObject::SetInputLayout()
 	return hr;
 }
 bool TObject::LoadTexture(
-		ID3D11Device* pd3dDevice, 
-		const TCHAR* pTextureFileName )
+	ID3D11Device* pd3dDevice,
+	const TCHAR* pTextureFileName)
 {
-	if (pTextureFileName == nullptr) return true;	
+	if (pTextureFileName == nullptr) return true;
 	m_pTexture[0] = I_Tex.GetPtr(I_Tex.Load(pd3dDevice, pTextureFileName));
 	T_STR szMask = L"Mask";
 	szMask += pTextureFileName;
@@ -174,15 +174,15 @@ bool TObject::LoadTexture(
 	return true;
 }
 bool TObject::Create(
-	ID3D11Device * pd3dDevice,
-	ID3D11DeviceContext * pContext,
+	ID3D11Device* pd3dDevice,
+	ID3D11DeviceContext* pContext,
 	const TCHAR* pTextureFileName,
 	const TCHAR* pShaderFileName)
 {
 	HRESULT hr;
 	m_pd3dDevice = pd3dDevice;
 	m_pContext = pContext;
-	
+
 	Init();
 
 	CreateVertexData();
@@ -222,7 +222,7 @@ bool TObject::Init()
 	return true;
 }
 bool TObject::Frame()
-{	
+{
 	return true;
 }
 
@@ -239,13 +239,13 @@ bool TObject::Render()
 		m_dxObj.m_pConstantBuffer.Get(), 0, NULL,
 		&m_cbData, 0, 0);
 
-	if(m_pTexture[0]!=nullptr)
+	if (m_pTexture[0] != nullptr)
 		m_pContext->PSSetShaderResources(0, 1, &m_pTexture[0]->m_pSRV);
 	if (m_pTexture[1] != nullptr)
 		m_pContext->PSSetShaderResources(1, 1, &m_pTexture[1]->m_pSRV);
 	m_pContext->PSSetSamplers(0, 1, &m_pSamplerState);
-	m_pContext->OMSetBlendState(m_pBlendState,0, 0xff);
-	
+	m_pContext->OMSetBlendState(m_pBlendState, 0, 0xff);
+
 	PostRender();
 	return true;
 }
@@ -255,8 +255,8 @@ bool TObject::PostRender()
 	return true;
 }
 bool TObject::Release()
-{	
-	
+{
+
 	return true;
 }
 

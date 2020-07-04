@@ -1,16 +1,16 @@
 #include "TDxState.h"
 
-ID3D11SamplerState* TDxState::g_pSamplerState=nullptr;
-ID3D11BlendState*   TDxState::g_pBSAlphaBlend = nullptr;
-ID3D11BlendState*   TDxState::g_pBSNoColorBlend = nullptr;
-ID3D11RasterizerState*   TDxState::g_pRSSolidNone = nullptr;
-ID3D11RasterizerState*   TDxState::g_pRSWireFrameBack = nullptr;
-ID3D11RasterizerState*   TDxState::g_pRSSolidBack = nullptr;
-ID3D11RasterizerState*   TDxState::g_pRSSolidFront = nullptr;
+ID3D11SamplerState* TDxState::g_pSamplerState = nullptr;
+ID3D11BlendState* TDxState::g_pBSAlphaBlend = nullptr;
+ID3D11BlendState* TDxState::g_pBSNoColorBlend = nullptr;
+ID3D11RasterizerState* TDxState::g_pRSSolidNone = nullptr;
+ID3D11RasterizerState* TDxState::g_pRSWireFrameBack = nullptr;
+ID3D11RasterizerState* TDxState::g_pRSSolidBack = nullptr;
+ID3D11RasterizerState* TDxState::g_pRSSolidFront = nullptr;
 ID3D11DepthStencilState* TDxState::g_pDSSDepthEnable = nullptr;
 ID3D11DepthStencilState* TDxState::g_pDSSDepthDisable = nullptr;
-void TDxState::Create(  ID3D11Device* pd3dDevice, 
-						ID3D11DeviceContext*	pContext)
+
+void TDxState::Create(ID3D11Device* pd3dDevice, ID3D11DeviceContext* pContext)
 {
 	HRESULT hr;
 #pragma region  sampler state
@@ -55,7 +55,7 @@ void TDxState::Create(  ID3D11Device* pd3dDevice,
 	hr = pd3dDevice->CreateBlendState(
 		&bsd,
 		&g_pBSNoColorBlend);
-	
+
 #pragma endregion 
 #pragma region RasterizerState 
 	D3D11_RASTERIZER_DESC rd;
@@ -80,8 +80,8 @@ void TDxState::Create(  ID3D11Device* pd3dDevice,
 #pragma region DSS
 	D3D11_DEPTH_STENCIL_DESC dsd;
 	dsd.DepthEnable = TRUE;
-	dsd.DepthWriteMask= D3D11_DEPTH_WRITE_MASK_ALL;
-	dsd.DepthFunc= D3D11_COMPARISON_LESS_EQUAL;
+	dsd.DepthWriteMask = D3D11_DEPTH_WRITE_MASK_ALL;
+	dsd.DepthFunc = D3D11_COMPARISON_LESS_EQUAL;
 
 	dsd.StencilEnable = FALSE;
 	dsd.StencilReadMask = 1;
@@ -89,7 +89,7 @@ void TDxState::Create(  ID3D11Device* pd3dDevice,
 	dsd.FrontFace.StencilFunc = D3D11_COMPARISON_ALWAYS;
 	dsd.FrontFace.StencilPassOp = D3D11_STENCIL_OP_INCR;
 	dsd.FrontFace.StencilFailOp = D3D11_STENCIL_OP_KEEP;
-	dsd.FrontFace.StencilDepthFailOp= D3D11_STENCIL_OP_KEEP;
+	dsd.FrontFace.StencilDepthFailOp = D3D11_STENCIL_OP_KEEP;
 
 	dsd.BackFace.StencilFunc = D3D11_COMPARISON_ALWAYS;
 	dsd.BackFace.StencilPassOp = D3D11_STENCIL_OP_INCR;
@@ -100,7 +100,9 @@ void TDxState::Create(  ID3D11Device* pd3dDevice,
 
 	dsd.DepthEnable = FALSE;
 	pd3dDevice->CreateDepthStencilState(&dsd, &g_pDSSDepthDisable);
-#pragma endregion 
+#pragma endregion
+
+
 }
 
 bool TDxState::Release()
@@ -111,7 +113,7 @@ bool TDxState::Release()
 	if (g_pRSSolidFront) g_pRSSolidFront->Release();
 	if (g_pRSSolidNone) g_pRSSolidNone->Release();
 	if (g_pRSWireFrameBack) g_pRSWireFrameBack->Release();
-	if(g_pSamplerState) g_pSamplerState->Release();
+	if (g_pSamplerState) g_pSamplerState->Release();
 	if (g_pBSAlphaBlend) g_pBSAlphaBlend->Release();
 	if (g_pBSNoColorBlend)g_pBSNoColorBlend->Release();
 	return true;
@@ -120,7 +122,6 @@ bool TDxState::Release()
 TDxState::TDxState()
 {
 }
-
 
 TDxState::~TDxState()
 {

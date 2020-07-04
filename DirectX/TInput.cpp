@@ -201,7 +201,7 @@ bool		TInput::Frame()
 // 매 프레임에서 드로우를 담당한다.
 bool		TInput::Render()
 {
-	ZeroMemory(m_csBuffer, sizeof(TCHAR)* MAX_PATH);
+	ZeroMemory(m_csBuffer, sizeof(TCHAR) * MAX_PATH);
 	m_strList.clear();
 
 	std::wstring strData0;
@@ -234,7 +234,7 @@ bool		TInput::Release()
 {
 	if (m_pKeyDevice)m_pKeyDevice->Unacquire();
 	if (m_pMouseDevice)m_pMouseDevice->Unacquire();
-	if(m_pKeyDevice)m_pKeyDevice->Release();
+	if (m_pKeyDevice)m_pKeyDevice->Release();
 	if (m_pMouseDevice) m_pMouseDevice->Release();
 	if (m_pDI)m_pDI->Release();
 	return true;

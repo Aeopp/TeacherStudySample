@@ -28,12 +28,12 @@ struct float4
 {
 	union
 	{
-		struct { float x, y, z,w; };
+		struct { float x, y, z, w; };
 		float v[4];
 	};
 };
 struct Vector2 : float2
-{	
+{
 	Vector2(const Vector2& v)
 	{
 		x = v.x; y = v.y;
@@ -50,23 +50,23 @@ struct Vector3 : float3
 	Vector3();
 	Vector3(const Vector3& v);
 	Vector3(float a, float b, float c);
-	Vector3 operator + (Vector3 const & v0);
-	Vector3 operator - (Vector3 const & v0);
-	Vector3 operator * (float  const & fScala);
-	Vector3 operator + (float  const & fScala);
-	Vector3 operator / (float  const & fScala);
-	bool operator == (Vector3 const & v);
+	Vector3 operator + (Vector3 const& v0);
+	Vector3 operator - (Vector3 const& v0);
+	Vector3 operator * (float  const& fScala);
+	Vector3 operator + (float  const& fScala);
+	Vector3 operator / (float  const& fScala);
+	bool operator == (Vector3 const& v);
 	float Length();
-	float Dot(Vector3 const & v0);
-	float operator | (Vector3 const & v);
-	Vector3 Cross(Vector3 const & v0);
-	Vector3 operator ^ (Vector3 const & v);
+	float Dot(Vector3 const& v0);
+	float operator | (Vector3 const& v);
+	Vector3 Cross(Vector3 const& v0);
+	Vector3 operator ^ (Vector3 const& v);
 	Vector3 Normal();
 	float Angle(Vector3& v);
 	Vector3 operator * (TMatrix& m);
 };
 struct Vector4 : float4
-{	
+{
 	Vector4() { x = y = z = w = 0; }
 	Vector4(const Vector4& v)
 	{
@@ -111,7 +111,7 @@ struct TMatrix :float4x4
 		_41 = m._41; _42 = m._42; _43 = m._43; _44 = m._44;
 	};
 	Vector3  mul(Vector3 v);
-	TMatrix operator * (TMatrix const &m);
+	TMatrix operator * (TMatrix const& m);
 	void Scale(const Vector3& v);
 	void Scale(float x, float y, float z);
 	void XRotate(float fRadian);
@@ -120,9 +120,9 @@ struct TMatrix :float4x4
 	void Translation(const Vector3& v);
 	void Translation(float x, float y, float z);
 	TMatrix Transpose();
-	TMatrix ViewMatrix( Vector3& pos,
-						Vector3& target, 
-						Vector3& up);
+	TMatrix ViewMatrix(Vector3 pos,
+		Vector3 target,
+		Vector3 up);
 	TMatrix PerspectiveFovLH(float fNearPlane,
 		float fFarPlane,
 		float fovy,

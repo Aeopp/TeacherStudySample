@@ -10,22 +10,22 @@ void TDevice::DeleteDXResource()
 void TDevice::ResizeDevice(UINT width, UINT height)
 {
 	if (m_pd3dDevice == nullptr) return;
-			//ReleaseDevice();
-			//SetD3DDevice(width, height);
+	//ReleaseDevice();
+	//SetD3DDevice(width, height);
 	DeleteDXResource();
 
 	m_pContext->OMSetRenderTargets(0, NULL, NULL);
 	if (m_pRTV) m_pRTV->Release();
 
-		DXGI_SWAP_CHAIN_DESC currentSD;
-		m_pSwapChain->GetDesc(&currentSD);
-		HRESULT hr = m_pSwapChain->ResizeBuffers(
-			currentSD.BufferCount,
-			width,
-			height,
-			currentSD.BufferDesc.Format,
-			currentSD.Flags);
-		if (FAILED(hr)) return;
+	DXGI_SWAP_CHAIN_DESC currentSD;
+	m_pSwapChain->GetDesc(&currentSD);
+	HRESULT hr = m_pSwapChain->ResizeBuffers(
+		currentSD.BufferCount,
+		width,
+		height,
+		currentSD.BufferDesc.Format,
+		currentSD.Flags);
+	if (FAILED(hr)) return;
 
 	CreateRenderTarget();
 	CreateDepthStencilView();
@@ -38,7 +38,7 @@ bool	TDevice::SetD3DDevice(UINT width, UINT height)
 	if (!CreateDevice()) return false;
 	if (!CreateGIFactory()) return false;
 
-	if (!CreateSwapChain(width,height)) return false;
+	if (!CreateSwapChain(width, height)) return false;
 	if (!CreateRenderTarget()) return false;
 	if (!CreateDepthStencilView()) return false;
 	if (!CreateViewport()) return false;
@@ -48,15 +48,15 @@ bool	TDevice::CreateGIFactory()
 {
 	if (m_pd3dDevice == NULL) return E_FAIL;
 	HRESULT hr;
-	IDXGIDevice * pDXGIDevice;
-	hr = m_pd3dDevice->QueryInterface(__uuidof(IDXGIDevice), (void **)&pDXGIDevice);
+	IDXGIDevice* pDXGIDevice;
+	hr = m_pd3dDevice->QueryInterface(__uuidof(IDXGIDevice), (void**)&pDXGIDevice);
 
-	IDXGIAdapter * pDXGIAdapter;
-	hr = pDXGIDevice->GetParent(__uuidof(IDXGIAdapter), (void **)&pDXGIAdapter);
+	IDXGIAdapter* pDXGIAdapter;
+	hr = pDXGIDevice->GetParent(__uuidof(IDXGIAdapter), (void**)&pDXGIAdapter);
 
-	IDXGIFactory * pIDXGIFactory;
-	pDXGIAdapter->GetParent(__uuidof(IDXGIFactory), 
-		(void **)&m_pGIFactory);
+	IDXGIFactory* pIDXGIFactory;
+	pDXGIAdapter->GetParent(__uuidof(IDXGIFactory),
+		(void**)&m_pGIFactory);
 
 	pDXGIDevice->Release();
 	pDXGIAdapter->Release();
@@ -134,9 +134,9 @@ bool	TDevice::CreateRenderTarget()
 		return false;
 	}
 	pBackBuffer->Release();
-		
+
 	m_pSwapChain->GetDesc(&m_SwapChainDesc);
-	
+
 	return true;
 }
 bool TDevice::CreateDepthStencilView()
@@ -146,8 +146,8 @@ bool TDevice::CreateDepthStencilView()
 	D3D11_TEXTURE2D_DESC td;
 	td.Width = m_SwapChainDesc.BufferDesc.Width;
 	td.Height = m_SwapChainDesc.BufferDesc.Height;
-	td.MipLevels=1;
-	td.ArraySize=1;
+	td.MipLevels = 1;
+	td.ArraySize = 1;
 	td.Format = DXGI_FORMAT_D24_UNORM_S8_UINT;
 	td.SampleDesc.Count = 1;
 	td.SampleDesc.Quality = 0;
@@ -155,14 +155,14 @@ bool TDevice::CreateDepthStencilView()
 	td.BindFlags = D3D11_BIND_DEPTH_STENCIL;
 	td.CPUAccessFlags = 0;
 	td.MiscFlags = 0;
-	hr = m_pd3dDevice->CreateTexture2D(&td,NULL, pDSTex.GetAddressOf());
+	hr = m_pd3dDevice->CreateTexture2D(&td, NULL, pDSTex.GetAddressOf());
 
 	D3D11_DEPTH_STENCIL_VIEW_DESC dsvd;
 	ZeroMemory(&dsvd, sizeof(dsvd));
 	dsvd.Format = DXGI_FORMAT_D24_UNORM_S8_UINT;
 	dsvd.ViewDimension = D3D11_DSV_DIMENSION_TEXTURE2D;
 
-	hr=m_pd3dDevice->CreateDepthStencilView(pDSTex.Get(), &dsvd, &m_pDSV);
+	hr = m_pd3dDevice->CreateDepthStencilView(pDSTex.Get(), &dsvd, &m_pDSV);
 	return true;
 }
 bool	TDevice::CreateViewport()
@@ -172,7 +172,7 @@ bool	TDevice::CreateViewport()
 	// 3번 뷰포트 세팅
 	m_vp.TopLeftX = 0;
 	m_vp.TopLeftY = 0;
-	m_vp.Width	= currentSD.BufferDesc.Width;
+	m_vp.Width = currentSD.BufferDesc.Width;
 	m_vp.Height = currentSD.BufferDesc.Height;
 	m_vp.MinDepth = 0;
 	m_vp.MaxDepth = 1;

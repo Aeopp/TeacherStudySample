@@ -165,8 +165,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="f443bd4d47b6005f61fb8ab4271b204e.jpg" />
-    <Image Include="Lin.png" />
+    <ClCompile Include="Sample.cpp" />
+    <ClCompile Include="TDxRT.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TDxRT.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Lin1.jpg" />
     <Image Include="Lin2.jpg" />
     <Image Include="Lin3.jpg" />
     <Image Include="Lin4.jpg" />
@@ -175,17 +181,6 @@
     <Image Include="Lin7.jpg" />
     <Image Include="Lin8.jpg" />
     <Image Include="Lin9.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="PS.txt" />
-    <Text Include="ShapeShader.txt" />
-    <Text Include="VS.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Sample.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Sample.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

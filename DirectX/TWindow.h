@@ -19,7 +19,7 @@ public:
 		WPARAM wParam,
 		LPARAM lParam);
 	virtual bool GameRun();
-	
+
 public:
 	TWindow();
 	virtual ~TWindow();

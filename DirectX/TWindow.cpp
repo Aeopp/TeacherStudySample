@@ -2,7 +2,7 @@
 HINSTANCE	g_hInstance = 0;
 HWND		g_hWnd = 0;
 RECT		g_rtClient;
-TWindow*    g_pWindow=nullptr;
+TWindow* g_pWindow = nullptr;
 LRESULT CALLBACK WndProc(
 	HWND hWnd,
 	UINT msg,
@@ -70,14 +70,14 @@ bool TWindow::SetWindow(HINSTANCE hInstance)
 		L"KGCAWIN",
 		L"SAMPLEWINDOW",
 		WS_OVERLAPPEDWINDOW,//WS_POPUPWINDOW,//WS_OVERLAPPEDWINDOW,
-		0, 
 		0,
-		rt.right-rt.left,
-		rt.bottom- rt.top,
+		0,
+		rt.right - rt.left,
+		rt.bottom - rt.top,
 		0, 0, m_hInstance, 0);
 
 	if (m_hWnd == NULL) return 1;
-	
+
 	GetClientRect(m_hWnd, &m_rtClient);
 	GetWindowRect(m_hWnd, &m_rtWindow);
 
@@ -88,7 +88,7 @@ bool TWindow::SetWindow(HINSTANCE hInstance)
 	return true;
 }
 bool TWindow::WinRun()
-{	
+{
 	if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))
 	{
 		TranslateMessage(&msg);

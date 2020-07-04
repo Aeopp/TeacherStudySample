@@ -1,11 +1,298 @@
-﻿Sample.obj : error LNK2019: "public: virtual __cdecl DX::TDxObject::~TDxObject(void)" (??1TDxObject@DX@@UEAA@XZ)"public: virtual void * __cdecl DX::TDxObject::`scalar deleting destructor'(unsigned int)" (??_GTDxObject@DX@@UEAAPEAXI@Z) 함수에서 참조되는 확인할 수 없는 외부 기호
-xObject.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual __cdecl DX::TDxObject::~TDxObject(void)" (??1TDxObject@DX@@UEAA@XZ)
+﻿  Sample.cpp
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(12,1): warning C4005: 'DXGI_STATUS_OCCLUDED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55840): message : 'DXGI_STATUS_OCCLUDED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(13,1): warning C4005: 'DXGI_STATUS_CLIPPED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55849): message : 'DXGI_STATUS_CLIPPED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(14,1): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55858): message : 'DXGI_STATUS_NO_REDIRECTION'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(15,1): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55867): message : 'DXGI_STATUS_NO_DESKTOP_ACCESS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(16,1): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55876): message : 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(17,1): warning C4005: 'DXGI_STATUS_MODE_CHANGED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55885): message : 'DXGI_STATUS_MODE_CHANGED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(18,1): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55894): message : 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(21,1): warning C4005: 'DXGI_ERROR_INVALID_CALL': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55909): message : 'DXGI_ERROR_INVALID_CALL'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(22,1): warning C4005: 'DXGI_ERROR_NOT_FOUND': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55918): message : 'DXGI_ERROR_NOT_FOUND'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(23,1): warning C4005: 'DXGI_ERROR_MORE_DATA': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55927): message : 'DXGI_ERROR_MORE_DATA'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(24,1): warning C4005: 'DXGI_ERROR_UNSUPPORTED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55936): message : 'DXGI_ERROR_UNSUPPORTED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(25,1): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55945): message : 'DXGI_ERROR_DEVICE_REMOVED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(26,1): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55954): message : 'DXGI_ERROR_DEVICE_HUNG'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(27,1): warning C4005: 'DXGI_ERROR_DEVICE_RESET': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55964): message : 'DXGI_ERROR_DEVICE_RESET'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(28,1): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55973): message : 'DXGI_ERROR_WAS_STILL_DRAWING'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(29,1): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55983): message : 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(30,1): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55992): message : 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(31,1): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56002): message : 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(32,1): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56011): message : 'DXGI_ERROR_NONEXCLUSIVE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(33,1): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56020): message : 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(34,1): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56030): message : 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(35,1): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56039): message : 'DXGI_ERROR_REMOTE_OUTOFMEMORY'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(917,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56303): message : 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(918,1): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56312): message : 'D3D11_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(919,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56322): message : 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(920,1): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56331): message : 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d10.h(608,1): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56279): message : 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d10.h(609,1): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56288): message : 'D3D10_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(59,1): warning C4005: 'D2DERR_WRONG_STATE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56368): message : 'D2DERR_WRONG_STATE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(64,1): warning C4005: 'D2DERR_NOT_INITIALIZED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56377): message : 'D2DERR_NOT_INITIALIZED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(69,1): warning C4005: 'D2DERR_UNSUPPORTED_OPERATION': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56386): message : 'D2DERR_UNSUPPORTED_OPERATION'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(74,1): warning C4005: 'D2DERR_SCANNER_FAILED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56395): message : 'D2DERR_SCANNER_FAILED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(79,1): warning C4005: 'D2DERR_SCREEN_ACCESS_DENIED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56404): message : 'D2DERR_SCREEN_ACCESS_DENIED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(84,1): warning C4005: 'D2DERR_DISPLAY_STATE_INVALID': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56413): message : 'D2DERR_DISPLAY_STATE_INVALID'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(89,1): warning C4005: 'D2DERR_ZERO_VECTOR': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56422): message : 'D2DERR_ZERO_VECTOR'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(97,1): warning C4005: 'D2DERR_INTERNAL_ERROR': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56431): message : 'D2DERR_INTERNAL_ERROR'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(103,1): warning C4005: 'D2DERR_DISPLAY_FORMAT_NOT_SUPPORTED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56440): message : 'D2DERR_DISPLAY_FORMAT_NOT_SUPPORTED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(108,1): warning C4005: 'D2DERR_INVALID_CALL': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56449): message : 'D2DERR_INVALID_CALL'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(113,1): warning C4005: 'D2DERR_NO_HARDWARE_DEVICE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56458): message : 'D2DERR_NO_HARDWARE_DEVICE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(119,1): warning C4005: 'D2DERR_RECREATE_TARGET': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56467): message : 'D2DERR_RECREATE_TARGET'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(124,1): warning C4005: 'D2DERR_TOO_MANY_SHADER_ELEMENTS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56476): message : 'D2DERR_TOO_MANY_SHADER_ELEMENTS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(129,1): warning C4005: 'D2DERR_SHADER_COMPILE_FAILED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56485): message : 'D2DERR_SHADER_COMPILE_FAILED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(134,1): warning C4005: 'D2DERR_MAX_TEXTURE_SIZE_EXCEEDED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56494): message : 'D2DERR_MAX_TEXTURE_SIZE_EXCEEDED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(139,1): warning C4005: 'D2DERR_UNSUPPORTED_VERSION': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56503): message : 'D2DERR_UNSUPPORTED_VERSION'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(144,1): warning C4005: 'D2DERR_BAD_NUMBER': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56512): message : 'D2DERR_BAD_NUMBER'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(149,1): warning C4005: 'D2DERR_WRONG_FACTORY': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56521): message : 'D2DERR_WRONG_FACTORY'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(154,1): warning C4005: 'D2DERR_LAYER_ALREADY_IN_USE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56530): message : 'D2DERR_LAYER_ALREADY_IN_USE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(159,1): warning C4005: 'D2DERR_POP_CALL_DID_NOT_MATCH_PUSH': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56539): message : 'D2DERR_POP_CALL_DID_NOT_MATCH_PUSH'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(164,1): warning C4005: 'D2DERR_WRONG_RESOURCE_DOMAIN': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56548): message : 'D2DERR_WRONG_RESOURCE_DOMAIN'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(169,1): warning C4005: 'D2DERR_PUSH_POP_UNBALANCED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56557): message : 'D2DERR_PUSH_POP_UNBALANCED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(174,1): warning C4005: 'D2DERR_RENDER_TARGET_HAS_LAYER_OR_CLIPRECT': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56566): message : 'D2DERR_RENDER_TARGET_HAS_LAYER_OR_CLIPRECT'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(179,1): warning C4005: 'D2DERR_INCOMPATIBLE_BRUSH_TYPES': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56575): message : 'D2DERR_INCOMPATIBLE_BRUSH_TYPES'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(184,1): warning C4005: 'D2DERR_WIN32_ERROR': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56584): message : 'D2DERR_WIN32_ERROR'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(189,1): warning C4005: 'D2DERR_TARGET_NOT_GDI_COMPATIBLE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56593): message : 'D2DERR_TARGET_NOT_GDI_COMPATIBLE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(194,1): warning C4005: 'D2DERR_TEXT_EFFECT_IS_WRONG_TYPE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56602): message : 'D2DERR_TEXT_EFFECT_IS_WRONG_TYPE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(201,1): warning C4005: 'D2DERR_TEXT_RENDERER_NOT_RELEASED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56611): message : 'D2DERR_TEXT_RENDERER_NOT_RELEASED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\D2DErr.h(206,1): warning C4005: 'D2DERR_EXCEEDS_MAX_BITMAP_SIZE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56620): message : 'D2DERR_EXCEEDS_MAX_BITMAP_SIZE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dwrite.h(4962,1): warning C4005: 'DWRITE_E_FILEFORMAT': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56787): message : 'DWRITE_E_FILEFORMAT'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dwrite.h(4967,1): warning C4005: 'DWRITE_E_UNEXPECTED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56796): message : 'DWRITE_E_UNEXPECTED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dwrite.h(4972,1): warning C4005: 'DWRITE_E_NOFONT': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56805): message : 'DWRITE_E_NOFONT'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dwrite.h(4978,1): warning C4005: 'DWRITE_E_FILENOTFOUND': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56814): message : 'DWRITE_E_FILENOTFOUND'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dwrite.h(4983,1): warning C4005: 'DWRITE_E_FILEACCESS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56823): message : 'DWRITE_E_FILEACCESS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dwrite.h(4988,1): warning C4005: 'DWRITE_E_FONTCOLLECTIONOBSOLETE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56832): message : 'DWRITE_E_FONTCOLLECTIONOBSOLETE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dwrite.h(4993,1): warning C4005: 'DWRITE_E_ALREADYREGISTERED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56841): message : 'DWRITE_E_ALREADYREGISTERED'의 이전 정의를 참조하십시오.
+  D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+D:\TeacherStudySample\TeacherStudySample\_33\Sample.cpp(61,21): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2395,23): warning C4244: '인수': 'wchar_t'에서 'const _Elem'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Elem=char
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2406): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(_Iter,const _Iter,std::input_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2406): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(_Iter,const _Iter,std::input_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2386): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(const _Iter,const _Iter,std::forward_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2386): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(const _Iter,const _Iter,std::forward_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+  TDxRT.cpp
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(12,1): warning C4005: 'DXGI_STATUS_OCCLUDED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55840): message : 'DXGI_STATUS_OCCLUDED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(13,1): warning C4005: 'DXGI_STATUS_CLIPPED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55849): message : 'DXGI_STATUS_CLIPPED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(14,1): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55858): message : 'DXGI_STATUS_NO_REDIRECTION'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(15,1): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55867): message : 'DXGI_STATUS_NO_DESKTOP_ACCESS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(16,1): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55876): message : 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(17,1): warning C4005: 'DXGI_STATUS_MODE_CHANGED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55885): message : 'DXGI_STATUS_MODE_CHANGED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(18,1): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55894): message : 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(21,1): warning C4005: 'DXGI_ERROR_INVALID_CALL': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55909): message : 'DXGI_ERROR_INVALID_CALL'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(22,1): warning C4005: 'DXGI_ERROR_NOT_FOUND': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55918): message : 'DXGI_ERROR_NOT_FOUND'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(23,1): warning C4005: 'DXGI_ERROR_MORE_DATA': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55927): message : 'DXGI_ERROR_MORE_DATA'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(24,1): warning C4005: 'DXGI_ERROR_UNSUPPORTED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55936): message : 'DXGI_ERROR_UNSUPPORTED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(25,1): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55945): message : 'DXGI_ERROR_DEVICE_REMOVED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(26,1): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55954): message : 'DXGI_ERROR_DEVICE_HUNG'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(27,1): warning C4005: 'DXGI_ERROR_DEVICE_RESET': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55964): message : 'DXGI_ERROR_DEVICE_RESET'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(28,1): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55973): message : 'DXGI_ERROR_WAS_STILL_DRAWING'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(29,1): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55983): message : 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(30,1): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(55992): message : 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(31,1): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56002): message : 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(32,1): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56011): message : 'DXGI_ERROR_NONEXCLUSIVE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(33,1): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56020): message : 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(34,1): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56030): message : 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\dxgitype.h(35,1): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56039): message : 'DXGI_ERROR_REMOTE_OUTOFMEMORY'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(917,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56303): message : 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(918,1): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56312): message : 'D3D11_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(919,1): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56322): message : 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d11.h(920,1): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56331): message : 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d10.h(608,1): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56279): message : 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\DirectX\dx\Include\d3d10.h(609,1): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56288): message : 'D3D10_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
+D:\TeacherStudySample\TeacherStudySample\_33\TDxRT.cpp(74,15): warning C4244: '=': 'UINT'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\TeacherStudySample\TeacherStudySample\_33\TDxRT.cpp(75,16): warning C4244: '=': 'UINT'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\TeacherStudySample\TeacherStudySample\_33\TDxRT.cpp(95,10): warning C4101: 'hr' :참조되지 않은 지역 변수입니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2395,23): warning C4244: '인수': 'wchar_t'에서 'const _Elem'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Elem=char
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2406): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(_Iter,const _Iter,std::input_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2406): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(_Iter,const _Iter,std::input_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2386): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(const _Iter,const _Iter,std::forward_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\xstring(2386): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(const _Iter,const _Iter,std::forward_iterator_tag)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Iter=wchar_t *
+          ]
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+D:\TeacherStudySample\TeacherStudySample\DirectX\TStd.h(79): message : 컴파일되는 함수 템플릿 인스턴스화 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+  코드를 생성하고 있습니다...
 Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual void __cdecl TDevice::ResizeDevice(unsigned int,unsigned int)" (?ResizeDevice@TDevice@@UEAAXII@Z)
 Sample.obj : error LNK2019: "public: bool __cdecl TWindow::SetWindow(struct HINSTANCE__ *)" (?SetWindow@TWindow@@QEAA_NPEAUHINSTANCE__@@@Z)wWinMain 함수에서 참조되는 확인할 수 없는 외부 기호
 Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual __int64 __cdecl TWindow::MsgProc(struct HWND__ *,unsigned int,unsigned __int64,__int64)" (?MsgProc@TWindow@@UEAA_JPEAUHWND__@@I_K_J@Z)
 Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual bool __cdecl TWindow::GameRun(void)" (?GameRun@TWindow@@UEAA_NXZ)
-Sample.obj : error LNK2019: "public: __cdecl TInput::TInput(void)" (??0TInput@@QEAA@XZ)"public: static class TInput & __cdecl TSingleton<class TInput>::GetInstance(void)" (?GetInstance@?$TSingleton@VTInput@@@@SAAEAVTInput@@XZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-Sample.obj : error LNK2019: "public: virtual __cdecl TInput::~TInput(void)" (??1TInput@@UEAA@XZ)"void __cdecl `public: static class TInput & __cdecl TSingleton<class TInput>::GetInstance(void)'::`2'::`dynamic atexit destructor for 'theSingleton''(void)" (??__FtheSingleton@?1??GetInstance@?$TSingleton@VTInput@@@@SAAEAVTInput@@XZ@YAXXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+Sample.obj : error LNK2019: "public: __cdecl Vector3::Vector3(float,float,float)" (??0Vector3@@QEAA@MMM@Z)"public: virtual bool __cdecl Sample::Init(void)" (?Init@Sample@@UEAA_NXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+Sample.obj : error LNK2019: "public: struct TMatrix __cdecl TMatrix::ViewMatrix(struct Vector3,struct Vector3,struct Vector3)" (?ViewMatrix@TMatrix@@QEAA?AU1@UVector3@@00@Z)"public: virtual bool __cdecl Sample::Init(void)" (?Init@Sample@@UEAA_NXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+Sample.obj : error LNK2019: "public: struct TMatrix __cdecl TMatrix::PerspectiveFovLH(float,float,float,float)" (?PerspectiveFovLH@TMatrix@@QEAA?AU1@MMMM@Z)"public: virtual bool __cdecl Sample::Init(void)" (?Init@Sample@@UEAA_NXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+Sample.obj : error LNK2019: "public: void __cdecl TObject::SetMatrix(struct TMatrix *,struct TMatrix *,struct TMatrix *)" (?SetMatrix@TObject@@QEAAXPEAUTMatrix@@00@Z)"public: virtual bool __cdecl Sample::Render(void)" (?Render@Sample@@UEAA_NXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual bool __cdecl TObject::Create(struct ID3D11Device *,struct ID3D11DeviceContext *,wchar_t const *,wchar_t const *)" (?Create@TObject@@UEAA_NPEAUID3D11Device@@PEAUID3D11DeviceContext@@PEB_W2@Z)
+Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual void __cdecl TObject::CreateConstantData(void)" (?CreateConstantData@TObject@@UEAAXXZ)
+Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual long __cdecl TObject::CreateVertexBuffer(void)" (?CreateVertexBuffer@TObject@@UEAAJXZ)
+Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual long __cdecl TObject::CreateIndexBuffer(void)" (?CreateIndexBuffer@TObject@@UEAAJXZ)
+Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual long __cdecl TObject::CreateConstantBuffer(void)" (?CreateConstantBuffer@TObject@@UEAAJXZ)
+Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual long __cdecl TObject::LoadShaderFile(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)" (?LoadShaderFile@TObject@@UEAAJV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@@Z)
+Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual long __cdecl TObject::SetInputLayout(void)" (?SetInputLayout@TObject@@UEAAJXZ)
+Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual bool __cdecl TObject::LoadTexture(struct ID3D11Device *,wchar_t const *)" (?LoadTexture@TObject@@UEAA_NPEAUID3D11Device@@PEB_W@Z)
+Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual bool __cdecl TObject::Init(void)" (?Init@TObject@@UEAA_NXZ)
+Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual bool __cdecl TObject::Frame(void)" (?Frame@TObject@@UEAA_NXZ)
+Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual bool __cdecl TObject::PreRender(void)" (?PreRender@TObject@@UEAA_NXZ)
+Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual bool __cdecl TObject::Render(void)" (?Render@TObject@@UEAA_NXZ)
+Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual bool __cdecl TObject::PostRender(void)" (?PostRender@TObject@@UEAA_NXZ)
+Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual bool __cdecl TObject::Release(void)" (?Release@TObject@@UEAA_NXZ)
+Sample.obj : error LNK2019: "public: __cdecl TObject::TObject(void)" (??0TObject@@QEAA@XZ)"public: __cdecl TPlaneObj::TPlaneObj(void)" (??0TPlaneObj@@QEAA@XZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+Sample.obj : error LNK2019: "public: __cdecl TObject::~TObject(void)" (??1TObject@@QEAA@XZ)"public: __cdecl TPlaneObj::~TPlaneObj(void)" (??1TPlaneObj@@QEAA@XZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual bool __cdecl TCore::Frame(void)" (?Frame@TCore@@UEAA_NXZ)
 Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual bool __cdecl TCore::PreRender(void)" (?PreRender@TCore@@UEAA_NXZ)
 Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual bool __cdecl TCore::PostRender(void)" (?PostRender@TCore@@UEAA_NXZ)
 Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual void __cdecl TCore::CreateDXResource(void)" (?CreateDXResource@TCore@@UEAAXXZ)
@@ -13,25 +300,10 @@ Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual 
 Sample.obj : error LNK2019: "public: bool __cdecl TCore::TRun(void)" (?TRun@TCore@@QEAA_NXZ)wWinMain 함수에서 참조되는 확인할 수 없는 외부 기호
 Sample.obj : error LNK2019: "public: __cdecl TCore::TCore(void)" (??0TCore@@QEAA@XZ)"public: __cdecl Sample::Sample(void)" (??0Sample@@QEAA@XZ) 함수에서 참조되는 확인할 수 없는 외부 기호
 Sample.obj : error LNK2019: "public: virtual __cdecl TCore::~TCore(void)" (??1TCore@@UEAA@XZ)"int `public: __cdecl Sample::Sample(void)'::`1'::dtor$0" (?dtor$0@?0???0Sample@@QEAA@XZ@4HA) 함수에서 참조되는 확인할 수 없는 외부 기호
-Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "float g_fTimer" (?g_fTimer@@3MA)
+Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual void __cdecl TPlaneObj::CreateVertexData(void)" (?CreateVertexData@TPlaneObj@@UEAAXXZ)
+Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: virtual void __cdecl TPlaneObj::CreateIndexData(void)" (?CreateIndexData@TPlaneObj@@UEAAXXZ)
 Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "struct tagRECT g_rtClient" (?g_rtClient@@3UtagRECT@@A)
-xObject.obj : error LNK2001: 확인할 수 없는 외부 기호 "struct tagRECT g_rtClient" (?g_rtClient@@3UtagRECT@@A)
-Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "struct TBASIS_INPUT_MAP g_InputData" (?g_InputData@@3UTBASIS_INPUT_MAP@@A)
 Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: static struct ID3D11SamplerState * TDxState::g_pSamplerState" (?g_pSamplerState@TDxState@@2PEAUID3D11SamplerState@@EA)
-Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: static struct ID3D11BlendState * TDxState::g_pBlendState" (?g_pBlendState@TDxState@@2PEAUID3D11BlendState@@EA)
-Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: static struct ID3D11DepthStencilState * TDxState::g_pDSSDepthEnable" (?g_pDSSDepthEnable@TDxState@@2PEAUID3D11DepthStencilState@@EA)
-Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: static struct ID3D11DepthStencilState * TDxState::g_pDSSDepthDisable" (?g_pDSSDepthDisable@TDxState@@2PEAUID3D11DepthStencilState@@EA)
-xObject.obj : error LNK2019: "struct ID3D11Buffer * __cdecl DX::CreateVertexBuffer(struct ID3D11Device *,void *,unsigned int,unsigned int)" (?CreateVertexBuffer@DX@@YAPEAUID3D11Buffer@@PEAUID3D11Device@@PEAXII@Z)"public: virtual long __cdecl xObject::CreateVertexBuffer(void)" (?CreateVertexBuffer@xObject@@UEAAJXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-xObject.obj : error LNK2019: "struct ID3D11Buffer * __cdecl DX::CreateIndexBuffer(struct ID3D11Device *,void *,unsigned int,unsigned int)" (?CreateIndexBuffer@DX@@YAPEAUID3D11Buffer@@PEAUID3D11Device@@PEAXII@Z)"public: virtual long __cdecl xObject::CreateIndexBuffer(void)" (?CreateIndexBuffer@xObject@@UEAAJXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-xObject.obj : error LNK2019: "struct ID3D11Buffer * __cdecl DX::CreateConstantBuffer(struct ID3D11Device *,void *,unsigned int,unsigned int)" (?CreateConstantBuffer@DX@@YAPEAUID3D11Buffer@@PEAUID3D11Device@@PEAXII@Z)"public: virtual long __cdecl xObject::CreateConstantBuffer(void)" (?CreateConstantBuffer@xObject@@UEAAJXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-xObject.obj : error LNK2019: "struct ID3D11InputLayout * __cdecl DX::CreateInputlayout(struct ID3D11Device *,unsigned long,void const *,struct D3D11_INPUT_ELEMENT_DESC *,unsigned int)" (?CreateInputlayout@DX@@YAPEAUID3D11InputLayout@@PEAUID3D11Device@@KPEBXPEAUD3D11_INPUT_ELEMENT_DESC@@I@Z)"public: virtual long __cdecl xObject::SetInputLayout(void)" (?SetInputLayout@xObject@@UEAAJXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-xObject.obj : error LNK2019: "struct ID3D11VertexShader * __cdecl DX::LoadVertexShaderFile(struct ID3D11Device *,wchar_t const *,unsigned long,char const *,char const *,struct ID3D10Blob * *)" (?LoadVertexShaderFile@DX@@YAPEAUID3D11VertexShader@@PEAUID3D11Device@@PEB_WKPEBD2PEAPEAUID3D10Blob@@@Z)"public: virtual long __cdecl xObject::LoadShaderFile(void)" (?LoadShaderFile@xObject@@UEAAJXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-xObject.obj : error LNK2019: "struct ID3D11PixelShader * __cdecl DX::LoadPixelShaderFile(struct ID3D11Device *,wchar_t const *,unsigned long,char const *,char const *,struct ID3D10Blob * *)" (?LoadPixelShaderFile@DX@@YAPEAUID3D11PixelShader@@PEAUID3D11Device@@PEB_WKPEBD2PEAPEAUID3D10Blob@@@Z)"public: virtual long __cdecl xObject::LoadShaderFile(void)" (?LoadShaderFile@xObject@@UEAAJXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-xObject.obj : error LNK2019: "public: bool __cdecl DX::TDxObject::PreRender(struct ID3D11DeviceContext *,unsigned int)" (?PreRender@TDxObject@DX@@QEAA_NPEAUID3D11DeviceContext@@I@Z)"public: virtual bool __cdecl xObject::PreRender(void)" (?PreRender@xObject@@UEAA_NXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-xObject.obj : error LNK2019: "public: bool __cdecl DX::TDxObject::PostRender(struct ID3D11DeviceContext *,unsigned int)" (?PostRender@TDxObject@DX@@QEAA_NPEAUID3D11DeviceContext@@I@Z)"public: virtual bool __cdecl xObject::PostRender(void)" (?PostRender@xObject@@UEAA_NXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-xObject.obj : error LNK2019: "public: __cdecl DX::TDxObject::TDxObject(void)" (??0TDxObject@DX@@QEAA@XZ)"public: __cdecl xObject::xObject(void)" (??0xObject@@QEAA@XZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-xObject.obj : error LNK2019: "public: int __cdecl TTextureMgr::Load(struct ID3D11Device *,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)" (?Load@TTextureMgr@@QEAAHPEAUID3D11Device@@V?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@@Z)"public: virtual bool __cdecl xObject::LoadTexture(struct ID3D11Device *,wchar_t const *,wchar_t const *)" (?LoadTexture@xObject@@UEAA_NPEAUID3D11Device@@PEB_W1@Z) 함수에서 참조되는 확인할 수 없는 외부 기호
-xObject.obj : error LNK2019: "public: class TTexture * __cdecl TTextureMgr::GetPtr(int)" (?GetPtr@TTextureMgr@@QEAAPEAVTTexture@@H@Z)"public: virtual bool __cdecl xObject::LoadTexture(struct ID3D11Device *,wchar_t const *,wchar_t const *)" (?LoadTexture@xObject@@UEAA_NPEAUID3D11Device@@PEB_W1@Z) 함수에서 참조되는 확인할 수 없는 외부 기호
-xObject.obj : error LNK2019: "private: __cdecl TTextureMgr::TTextureMgr(void)" (??0TTextureMgr@@AEAA@XZ)"public: static class TTextureMgr & __cdecl TSingleton<class TTextureMgr>::GetInstance(void)" (?GetInstance@?$TSingleton@VTTextureMgr@@@@SAAEAVTTextureMgr@@XZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-xObject.obj : error LNK2019: "public: __cdecl TTextureMgr::~TTextureMgr(void)" (??1TTextureMgr@@QEAA@XZ)"void __cdecl `public: static class TTextureMgr & __cdecl TSingleton<class TTextureMgr>::GetInstance(void)'::`2'::`dynamic atexit destructor for 'theSingleton''(void)" (??__FtheSingleton@?1??GetInstance@?$TSingleton@VTTextureMgr@@@@SAAEAVTTextureMgr@@XZ@YAXXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-D:\TeacherStudySample\TeacherStudySample\DirectX\x64\Debug\_33.exe : fatal error LNK1120: 34개의 확인할 수 없는 외부 참조입니다.
+Sample.obj : error LNK2001: 확인할 수 없는 외부 기호 "public: static struct ID3D11BlendState * TDxState::g_pBSAlphaBlend" (?g_pBSAlphaBlend@TDxState@@2PEAUID3D11BlendState@@EA)
+TDxRT.obj : error LNK2001: 확인할 수 없는 외부 기호 "float g_fTimer" (?g_fTimer@@3MA)
+D:\TeacherStudySample\TeacherStudySample\DirectX\x64\Debug\_33.exe : fatal error LNK1120: 38개의 확인할 수 없는 외부 참조입니다.

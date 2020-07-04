@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -20,12 +20,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TBoxObj.cpp" />
+    <ClCompile Include="TCamera.cpp" />
     <ClCompile Include="TCore.cpp" />
     <ClCompile Include="TDevice.cpp" />
     <ClCompile Include="TDxHelper.cpp" />
     <ClCompile Include="TDxHelperEx.cpp" />
     <ClCompile Include="TDxState.cpp" />
     <ClCompile Include="TInput.cpp" />
+    <ClCompile Include="TLineObj.cpp" />
     <ClCompile Include="TMath.cpp" />
     <ClCompile Include="TObject.cpp" />
     <ClCompile Include="TPlaneObj.cpp" />
@@ -37,12 +39,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TBoxObj.h" />
+    <ClInclude Include="TCamera.h" />
     <ClInclude Include="TCore.h" />
     <ClInclude Include="TDevice.h" />
     <ClInclude Include="TDxHelper.h" />
     <ClInclude Include="TDxHelperEx.h" />
     <ClInclude Include="TDxState.h" />
     <ClInclude Include="TInput.h" />
+    <ClInclude Include="TLineObj.h" />
     <ClInclude Include="TMath.h" />
     <ClInclude Include="TObject.h" />
     <ClInclude Include="TPlaneObj.h" />
@@ -52,6 +56,10 @@
     <ClInclude Include="TTimer.h" />
     <ClInclude Include="TWindow.h" />
     <ClInclude Include="TWrite.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="LineShader.txt" />
+    <Text Include="ShapeShader.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

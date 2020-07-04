@@ -46,7 +46,7 @@ int		TTextureMgr::Load(ID3D11Device* pd3dDevice, T_STR szLoadName)
 	SAFE_NEW(pData, TTexture);
 	pData->Init();
 	pData->m_csName = szFileName;
-	if (pData->Load(pd3dDevice,szLoadName))
+	if (pData->Load(pd3dDevice, szLoadName))
 	{
 		m_Map.insert(make_pair(++m_iCurIndex, pData));
 		return m_iCurIndex;
@@ -81,7 +81,7 @@ bool TTextureMgr::Release()
 TTextureMgr::TTextureMgr()
 {
 	m_iCurIndex = 0;
-	m_csDefaultPath = L"../../../data/";
+	m_csDefaultPath = L"";
 	Init();
 }
 TTextureMgr::~TTextureMgr()

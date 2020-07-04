@@ -1,173 +1,141 @@
-#include "Sample.h"
-bool Sample::Init() {
+#include "TCore.h"
+#include "TPlaneObj.h"
+#include "TDxRT.h"
 
-	D3D11_DEPTH_STENCIL_DESC dsd;
-	dsd.DepthEnable = TRUE;
-	dsd.DepthWriteMask = D3D11_DEPTH_WRITE_MASK_ALL;
-	dsd.DepthFunc = D3D11_COMPARISON_LESS_EQUAL;
-
-	dsd.StencilEnable = TRUE;
-	dsd.StencilReadMask = 1;
-	dsd.StencilWriteMask = 1;
-	dsd.FrontFace.StencilFunc = D3D11_COMPARISON_ALWAYS;
-	dsd.FrontFace.StencilPassOp = D3D11_STENCIL_OP_INCR;
-	dsd.FrontFace.StencilFailOp = D3D11_STENCIL_OP_KEEP;
-	dsd.FrontFace.StencilDepthFailOp = D3D11_STENCIL_OP_KEEP;
-
-	dsd.BackFace.StencilFunc = D3D11_COMPARISON_ALWAYS;
-	dsd.BackFace.StencilPassOp = D3D11_STENCIL_OP_INCR;
-	dsd.BackFace.StencilFailOp = D3D11_STENCIL_OP_KEEP;
-	dsd.BackFace.StencilDepthFailOp = D3D11_STENCIL_OP_KEEP;
-
-	m_pd3dDevice->CreateDepthStencilState(&dsd, m_pDSSBox.GetAddressOf());
-	
-	dsd.FrontFace.StencilFunc = D3D11_COMPARISON_NOT_EQUAL;
-	dsd.FrontFace.StencilPassOp = D3D11_STENCIL_OP_KEEP;
-	dsd.FrontFace.StencilFailOp = D3D11_STENCIL_OP_KEEP;
-	dsd.FrontFace.StencilDepthFailOp = D3D11_STENCIL_OP_KEEP;
-
-	dsd.BackFace.StencilFunc = D3D11_COMPARISON_NOT_EQUAL;
-	dsd.BackFace.StencilPassOp = D3D11_STENCIL_OP_KEEP;
-	dsd.BackFace.StencilFailOp = D3D11_STENCIL_OP_KEEP;
-	dsd.BackFace.StencilDepthFailOp = D3D11_STENCIL_OP_KEEP;
-
-	m_pd3dDevice->CreateDepthStencilState(&dsd, m_pDSSPlane.GetAddressOf());
-
-	RECT rt = { 400,300,600,450 };
-
-	m_PlaneObj.SetScreenRect(rt);
-	m_PlaneObj.Create(m_pd3dDevice,
-		m_pContext,
-		L"Lin3.jpg",
-		L"ShapeShader.txt");
-
-	m_PlaneObj.m_pBlendState = TDxState::g_pBSAlphaBlend; 
-	m_PlaneObj.m_pSamplerState = TDxState::g_pSamplerState;
-
-	m_BoxObj.Create(m_pd3dDevice,
-		m_pContext,
-		L"Lin4.jpg",
-		L"ShapeShader.txt");
-
-	m_BoxObj.m_pBlendState = TDxState::g_pBSNoColorBlend;
-	m_BoxObj.m_pSamplerState = TDxState::g_pSamplerState;
-
-	m_BoxObjChild.Create(m_pd3dDevice,
-		m_pContext,
-		L"Lin5.jpg",
-		L"ShapeShader.txt");
-
-	m_BoxObjChild.m_pBlendState = TDxState::g_pBSNoColorBlend;
-	m_BoxObjChild.m_pSamplerState = TDxState::g_pSamplerState;
-
-	m_BoxObjLeaf.Create(m_pd3dDevice,
-		m_pContext,
-		L"Lin6.jpg",
-		L"ShapeShader.txt");
-
-	m_BoxObjLeaf.m_pBlendState = TDxState::g_pBSNoColorBlend;
-	m_BoxObjLeaf.m_pSamplerState = TDxState::g_pSamplerState;
-
-	
-
-	m_Camera.m_vPos = Vector3(0, 35, -0.2f);
-	m_Camera.m_vTarget = Vector3(0, 0, 0.0f);
-	m_Camera.m_vUp = Vector3(0, 1, 0.0f);
-	m_Camera.m_matView.ViewMatrix(
-		m_Camera.m_vPos,
-		m_Camera.m_vTarget,
-		m_Camera.m_vUp);
-
-	float Aspect = g_rtClient.right / g_rtClient.bottom;
-	m_Camera.m_matProj.PerspectiveFovLH(
-		1.0f,
-		100.0f,
-		TBASIS_PI * 0.25f,
-		Aspect);
-
-	TMatrix scale;
-	scale.Scale(20, 20, 20);
-	m_matWorldPlane.XRotate(DegreeToRadian(90));
-	m_matWorldPlane = scale * m_matWorldPlane;
-
-	m_matWorldPlane._42 = 3;
-	return true;
-
-}
-
-bool Sample::Frame()
+class TFullScreen : public TPlaneObj
 {
-	TMatrix trans, spin, scale;
-	trans.Translation(7, 0, 0);
-	scale.Scale(2, 2, 2);
-	spin.YRotate(g_fTimer);
+public:
+	ID3D11ShaderResourceView* m_pSRV;
+	bool Render()
+	{
+		PreRender();
+		m_pContext->UpdateSubresource(
+			m_dxObj.m_pConstantBuffer.Get(), 0, NULL,
+			&m_cbData, 0, 0);
 
-	m_matWorldBox = scale * spin;
-	TMatrix invScale = scale.Transpose();
-	m_matWorldBoxChild = spin * trans * spin;
-	trans.Translation(3, 0, 0);
+		if (m_pTexture[0] != nullptr)
+			m_pContext->PSSetShaderResources(0, 1, &m_pSRV);
 
-	scale.Scale(0.5f, 0.5f, 0.5f);
-	m_matWorldBoxLeaf = scale * trans * spin * m_matWorldBoxChild;
+		m_pContext->PSSetSamplers(0, 1, &m_pSamplerState);
+		m_pContext->OMSetBlendState(m_pBlendState, 0, 0xff);
 
-	m_PlaneObj.Frame();
-	m_BoxObj.Frame();
-	m_BoxObjChild.Frame();
-	return true;
+		PostRender();
+		return true;
+
+	}
+};
+class Sample : public TCore
+{
+	TDxRT   m_DxRT;
+	TPlaneObj m_PlaneObj;
+	TFullScreen m_FullScreenObj;
+public:
+	bool  Init()
+	{
+		RECT rt = { 0,0,800, 600 };
+		m_PlaneObj.SetScreenRect(rt);
+		m_PlaneObj.Create(m_pd3dDevice,
+			m_pContext,
+			L"Lin1.jpg",
+			L"ShapeShader.txt");
+		m_PlaneObj.m_pBlendState = TDxState::g_pBSAlphaBlend;
+		m_PlaneObj.m_pSamplerState = TDxState::g_pSamplerState;
+
+		//m_FullScreenObj.SetScreenRect(rt);
+		m_FullScreenObj.Create(m_pd3dDevice,
+			m_pContext,
+			L"Lin2.jpg",
+			L"ShapeShader.txt");
+		m_FullScreenObj.m_pBlendState = TDxState::g_pBSAlphaBlend;
+		m_FullScreenObj.m_pSamplerState = TDxState::g_pSamplerState;
+
+		m_DxRT.Create(m_pd3dDevice, 1024, 1024);
+		m_Camera.m_matView.ViewMatrix(
+			{ 0, 0, -5.0f },
+			{ 0, 0, 0.0f },
+			{ 0, 1, 0.0f });
+		m_Camera.m_matProj.PerspectiveFovLH(
+			1.0f,
+			100.0f,
+			TBASIS_PI * 0.25f,
+			g_rtClient.right / g_rtClient.bottom);
+		return true;
+	}
+	bool  Render()
+	{
+		m_DxRT.Begin(m_pContext);
+		m_PlaneObj.SetMatrix(NULL, &m_Camera.m_matView, &m_Camera.m_matProj);
+		m_PlaneObj.Render();
+		m_DxRT.End(m_pContext);
+		ID3D11ShaderResourceView* pSRVs[16] = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+		m_pContext->PSSetShaderResources(0, 16, pSRVs);
+
+		PreRender();
+		m_FullScreenObj.SetMatrix(NULL, NULL, NULL);
+		m_FullScreenObj.m_pSRV = m_DxRT.m_pRT_SRV.Get();
+		m_FullScreenObj.Render();
+		return true;
+	}
+	bool  Release()
+	{
+		m_PlaneObj.Release();
+		m_FullScreenObj.Release();
+		return true;
+	}
+	void ClearD3D11DeviceContext(ID3D11DeviceContext* pd3dDeviceContext)
+	{
+		// Unbind all objects from the immediate context
+		if (pd3dDeviceContext == NULL) return;
+
+		ID3D11ShaderResourceView* pSRVs[16] = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+		ID3D11RenderTargetView* pRTVs[16] = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+		ID3D11DepthStencilView* pDSV = NULL;
+		ID3D11Buffer* pBuffers[16] = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+		ID3D11SamplerState* pSamplers[16] = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+		UINT StrideOffset[16] = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+
+		// Shaders
+		pd3dDeviceContext->VSSetShader(NULL, NULL, 0);
+		pd3dDeviceContext->HSSetShader(NULL, NULL, 0);
+		pd3dDeviceContext->DSSetShader(NULL, NULL, 0);
+		pd3dDeviceContext->GSSetShader(NULL, NULL, 0);
+		pd3dDeviceContext->PSSetShader(NULL, NULL, 0);
+
+		// IA clear
+		pd3dDeviceContext->IASetVertexBuffers(0, 16, pBuffers, StrideOffset, StrideOffset);
+		pd3dDeviceContext->IASetIndexBuffer(NULL, DXGI_FORMAT_R16_UINT, 0);
+		pd3dDeviceContext->IASetInputLayout(NULL);
+
+		// Constant buffers
+		pd3dDeviceContext->VSSetConstantBuffers(0, 14, pBuffers);
+		pd3dDeviceContext->HSSetConstantBuffers(0, 14, pBuffers);
+		pd3dDeviceContext->DSSetConstantBuffers(0, 14, pBuffers);
+		pd3dDeviceContext->GSSetConstantBuffers(0, 14, pBuffers);
+		pd3dDeviceContext->PSSetConstantBuffers(0, 14, pBuffers);
+
+		// Resources
+		pd3dDeviceContext->VSSetShaderResources(0, 16, pSRVs);
+		pd3dDeviceContext->HSSetShaderResources(0, 16, pSRVs);
+		pd3dDeviceContext->DSSetShaderResources(0, 16, pSRVs);
+		pd3dDeviceContext->GSSetShaderResources(0, 16, pSRVs);
+		pd3dDeviceContext->PSSetShaderResources(0, 16, pSRVs);
+
+		// Samplers
+		pd3dDeviceContext->VSSetSamplers(0, 16, pSamplers);
+		pd3dDeviceContext->HSSetSamplers(0, 16, pSamplers);
+		pd3dDeviceContext->DSSetSamplers(0, 16, pSamplers);
+		pd3dDeviceContext->GSSetSamplers(0, 16, pSamplers);
+		pd3dDeviceContext->PSSetSamplers(0, 16, pSamplers);
+
+		// Render targets
+		pd3dDeviceContext->OMSetRenderTargets(8, pRTVs, pDSV);
+
+		// States
+		FLOAT blendFactor[4] = { 0,0,0,0 };
+		pd3dDeviceContext->OMSetBlendState(NULL, blendFactor, 0xFFFFFFFF);
+		pd3dDeviceContext->OMSetDepthStencilState(NULL, 0);
+		pd3dDeviceContext->RSSetState(NULL);
+	}
 };
 
-bool Sample::Render()
-{
-	if (g_InputData.bWKey)
-	{
-		//ApplyDSS(m_pContext, TDxState::g_pDSSDepthEnable);
-		m_Camera.m_vPos =
-			m_Camera.m_vPos + Vector3(0, 0, 1) * g_fSecondPerFrame * 1.3f;
-	}
-	if (g_InputData.bSKey)
-	{
-		//ApplyDSS(m_pContext, TDxState::g_pDSSDepthDisable);
-		m_Camera.m_vPos =
-			m_Camera.m_vPos + Vector3(0, 0, 1) * g_fSecondPerFrame * -1.3f;
-	}
-	m_Camera.m_matView.ViewMatrix(
-		m_Camera.m_vPos,
-		m_Camera.m_vTarget,
-		m_Camera.m_vUp);
-
-
-	ApplyRS(m_pContext, TDxState::g_pRSSolidBack);
-	ApplyDSS(m_pContext, m_pDSSBox.Get(), 0x01);
-
-	m_BoxObj.SetMatrix(&m_matWorldBox,
-		&m_Camera.m_matView,
-		&m_Camera.m_matProj);
-	m_BoxObj.Render();
-
-	m_BoxObjChild.SetMatrix(&m_matWorldBoxChild,
-		&m_Camera.m_matView,
-		&m_Camera.m_matProj);
-	m_BoxObjChild.Render();
-
-	m_BoxObjLeaf.SetMatrix(&m_matWorldBoxLeaf,
-		&m_Camera.m_matView,
-		&m_Camera.m_matProj);
-	m_BoxObjLeaf.Render();
-
-	ApplyDSS(m_pContext, m_pDSSPlane.Get(), 0x00);
-	ApplyBS(m_pContext, TDxState::g_pBSAlphaBlend);
-	m_PlaneObj.SetMatrix(&m_matWorldPlane,
-		&m_Camera.m_matView,
-		&m_Camera.m_matProj);
-	m_PlaneObj.Render();
-
-	return true;
-}
-bool Sample::Release()
-{
-	m_PlaneObj.Release();
-	m_BoxObj.Release();
-	m_BoxObjChild.Release();
-	m_BoxObjLeaf.Release();
-	return true;
-}
+TWINGAME;

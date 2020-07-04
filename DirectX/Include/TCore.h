@@ -6,12 +6,15 @@
 #include "TInput.h"
 #include "TDxState.h" 
 #include "TTextureMgr.h" 
-
+#include "TLineObj.h"
+#include "TCamera.h"
 class TCore : public TWindow
 {
 public:
 	TWrite		m_Write;
 	TTimer		m_Timer;
+	TDirectionLineObj	m_DirLine;
+	TCamera				m_Camera;
 public:
 	virtual bool	Init();
 	virtual bool	Frame();

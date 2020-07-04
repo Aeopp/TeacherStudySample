@@ -35,13 +35,13 @@ struct VS_CB
 class TObject
 {
 public:
-	ID3D11Device*			m_pd3dDevice;
-	ID3D11DeviceContext*	m_pContext;
+	ID3D11Device* m_pd3dDevice;
+	ID3D11DeviceContext* m_pContext;
 	UINT					m_iNumVertex;
 	UINT					m_iNumIndex;
 	std::vector<PNCT_VERTEX>	m_pVertexList;
 	std::vector<DWORD>		m_pIndexList;
-	
+
 	RECT					m_rt;
 	VS_CB					m_cbData;
 	Vector3					m_vInitPos;
@@ -52,19 +52,13 @@ public:
 	TMatrix					m_matProj;
 public:
 	DX::TDxObject			m_dxObj;
-	/*ID3D11Buffer*		m_pVertexBuffer;
-	ID3D11Buffer*		m_pIndexBuffer;
-	ID3D11Buffer*		m_pConstantBuffer;
-	ID3D11InputLayout*  m_pVertexLayout;
-	ID3D11VertexShader* m_pVS;	
-	ID3D11PixelShader*  m_pPS;*/
 	TTexture* m_pTexture[2];
 	ID3D11SamplerState* m_pSamplerState;
-	ID3D11BlendState*   m_pBlendState;
+	ID3D11BlendState* m_pBlendState;
 public:
-	void	SetMatrix(	TMatrix* matWorld, 
-						TMatrix* matView=nullptr, 
-						TMatrix* matProj = nullptr);
+	void	SetMatrix(TMatrix* matWorld,
+		TMatrix* matView = nullptr,
+		TMatrix* matProj = nullptr);
 	void    SetPos(Vector3 p);
 	Vector3  ScreenToNDC(POINT pt);
 	void     SetScreenRect(RECT rt)
@@ -73,7 +67,7 @@ public:
 	}
 	virtual bool Create(
 		ID3D11Device* pd3dDevice,
-		ID3D11DeviceContext*	pContext,		
+		ID3D11DeviceContext* pContext,
 		const TCHAR* pTextureFileName,
 		const TCHAR* pShaderFileName);
 
@@ -85,7 +79,7 @@ public:
 	virtual HRESULT CreateConstantBuffer();
 	virtual HRESULT LoadShaderFile(T_STR szShaderFileName);
 	virtual HRESULT SetInputLayout();
-	virtual bool	LoadTexture(ID3D11Device * pd3dDevice,
+	virtual bool	LoadTexture(ID3D11Device* pd3dDevice,
 		const TCHAR* pTextureFileName);
 public:
 	virtual bool Init();

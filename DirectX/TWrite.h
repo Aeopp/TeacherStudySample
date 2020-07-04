@@ -26,17 +26,17 @@ class TWrite
 public:
 	std::vector<TTextArray>  m_TextList;
 	void Draw(UINT iSize, const TCHAR* szBuffer, RECT rt,
-				D2D1::ColorF color = D2D1::ColorF(1, 0, 0, 1));
+		D2D1::ColorF color = D2D1::ColorF(1, 0, 0, 1));
 public:
-	ID2D1Factory*		m_pD2DFactory;
-	IDWriteFactory*		m_pDWriteFactory;
-	IDWriteTextFormat*  m_pTextFormat[4];
-	ID2D1RenderTarget*	m_pd2dRT;
+	ID2D1Factory* m_pD2DFactory;
+	IDWriteFactory* m_pDWriteFactory;
+	IDWriteTextFormat* m_pTextFormat[4];
+	ID2D1RenderTarget* m_pd2dRT;
 	float m_fDpiX;
 	float m_fDpiY;
-	ID2D1SolidColorBrush*   m_pDefaultBrush;
+	ID2D1SolidColorBrush* m_pDefaultBrush;
 
-	IDWriteTextLayout*  m_pTextLayout;
+	IDWriteTextLayout* m_pTextLayout;
 	bool   SetTextLayout(const TCHAR* text);
 public:
 	bool	Init();

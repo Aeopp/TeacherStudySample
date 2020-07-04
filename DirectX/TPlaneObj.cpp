@@ -39,7 +39,7 @@
 void TPlaneObj::CreateVertexData()
 {
 	m_pVertexList.resize(4);
-	m_pVertexList[0].p = {-1.0f, 1.0f, 0.0f};
+	m_pVertexList[0].p = { -1.0f, 1.0f, 0.0f };
 	m_pVertexList[0].n = Vector3(0, 0, -1);
 	m_pVertexList[0].c = Vector4(1, 0, 0, 1);
 	m_pVertexList[0].t = Vector2(0, 0);
