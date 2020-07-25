@@ -1,2 +1,2 @@
 # TeacherStudySample
- KGCA DirectX 3D Study Sample
+ DirectX 3D Study Sample
